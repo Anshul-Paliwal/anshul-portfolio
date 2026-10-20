@@ -413,10 +413,10 @@ export default function PortfolioPage({
                         </header>
 
                         {/* Middle Content: Big Typographic Backdrop + Flanking Columns + Central Transparent Cutout */}
-                        <div className="relative z-10 my-auto flex-1 flex flex-col justify-center py-2 sm:py-3 w-full overflow-hidden">
+                        <div className="relative z-10 my-auto flex-1 min-h-0 flex flex-col justify-center py-2 sm:py-3 w-full">
                             
                             {/* Giant Background Text visible through the transparent image */}
-                            <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none select-none z-0">
+                            <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none select-none z-0 overflow-hidden">
                                 <span className="text-[13vw] sm:text-[12vw] lg:text-[11vw] font-black uppercase tracking-tighter text-white/[0.07] leading-none whitespace-nowrap">
                                     FULL-STACK
                                 </span>
@@ -426,11 +426,11 @@ export default function PortfolioPage({
                             </div>
 
                             {/* Center Cutout Portrait: Background completely removed, standing in front of text */}
-                            <div className="hero-portrait absolute left-1/2 bottom-0 sm:bottom-2 lg:bottom-4 -translate-x-1/2 z-10 pointer-events-none flex justify-center items-end">
+                            <div className="hero-portrait absolute inset-x-0 bottom-0 top-0 z-10 pointer-events-none flex justify-center items-end">
                                 <img
                                     src="/anshul-cutout.png"
                                     alt="Anshul Paliwal"
-                                    className="w-auto h-[62vh] sm:h-[72vh] md:h-[80vh] lg:h-[86vh] max-h-[660px] lg:max-h-[740px] object-contain object-bottom drop-shadow-[0_25px_50px_rgba(0,0,0,0.85)] select-none"
+                                    className="w-auto h-full max-h-full object-contain object-bottom drop-shadow-[0_25px_50px_rgba(0,0,0,0.85)] select-none"
                                 />
                             </div>
 
