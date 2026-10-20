@@ -389,18 +389,8 @@ export default function PortfolioPage({
 
                         {/* Top Navigation */}
                         <header className="hero-nav shrink-0 relative z-30 flex items-center justify-between">
-                            {/* Left: Brand Identity */}
-                            <div className="font-sans">
-                                <span className="block text-white font-semibold text-base sm:text-lg md:text-xl leading-tight tracking-tight">Anshul</span>
-                                <span className="block text-white/90 font-semibold text-base sm:text-lg md:text-xl leading-tight tracking-tight">Paliwal</span>
-                                <div className="flex items-center gap-1.5 mt-1 font-mono text-[10px] text-white/40 tracking-wider">
-                                    <span className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse"></span>
-                                    <span>IN // DEHRADUN</span>
-                                </div>
-                            </div>
-
-                            {/* Center: Nav Links matching Resume */}
-                            <nav className="hidden md:flex items-center gap-8 lg:gap-14 text-sm lg:text-base text-white/60 font-sans tracking-wide">
+                            {/* Left: Navigation Bar shifted to left */}
+                            <nav className="flex items-center gap-6 sm:gap-8 lg:gap-12 text-sm lg:text-base text-white/70 font-sans tracking-wide">
                                 <a href="#about" className="hover:text-white transition-colors duration-200">About</a>
                                 <a href="#experience" className="hover:text-white transition-colors duration-200">Experience</a>
                                 <a href="#projects" className="hover:text-white transition-colors duration-200">Projects</a>
@@ -422,25 +412,33 @@ export default function PortfolioPage({
                             </div>
                         </header>
 
-                        {/* Large Portrait Overlaid in the Center */}
-                        <div className="hero-portrait absolute left-1/2 bottom-12 md:bottom-14 lg:bottom-12 -translate-x-1/2 z-20 pointer-events-none flex justify-center items-end">
-                            <img
-                                src="/anshul.jpg"
-                                alt="Anshul Paliwal"
-                                style={{
-                                    maskImage: "linear-gradient(to bottom, black 80%, transparent 100%)",
-                                    WebkitMaskImage: "linear-gradient(to bottom, black 80%, transparent 100%)",
-                                }}
-                                className="w-auto h-[62vh] sm:h-[72vh] md:h-[80vh] lg:h-[88vh] max-h-[660px] lg:max-h-[740px] object-contain object-bottom drop-shadow-[0_20px_50px_rgba(0,0,0,0.9)] select-none"
-                            />
-                        </div>
+                        {/* Middle Content: Big Typographic Backdrop + Flanking Columns + Central Transparent Cutout */}
+                        <div className="relative z-10 my-auto flex-1 flex flex-col justify-center py-2 sm:py-3 w-full overflow-hidden">
+                            
+                            {/* Giant Background Text visible through the transparent image */}
+                            <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none select-none z-0">
+                                <span className="text-[13vw] sm:text-[12vw] lg:text-[11vw] font-black uppercase tracking-tighter text-white/[0.07] leading-none whitespace-nowrap">
+                                    FULL-STACK
+                                </span>
+                                <span className="text-[13vw] sm:text-[12vw] lg:text-[11vw] font-black uppercase tracking-tighter text-white/[0.07] leading-none whitespace-nowrap -mt-2 sm:-mt-4">
+                                    DEVELOPER
+                                </span>
+                            </div>
 
-                        {/* Middle Content: Flanking Columns with Center Space for Large Portrait */}
-                        <div className="relative z-10 my-auto flex-1 flex flex-col justify-center py-2 sm:py-3 w-full">
-                            <div className="flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-10 w-full">
+                            {/* Center Cutout Portrait: Background completely removed, standing in front of text */}
+                            <div className="hero-portrait absolute left-1/2 bottom-0 sm:bottom-2 lg:bottom-4 -translate-x-1/2 z-10 pointer-events-none flex justify-center items-end">
+                                <img
+                                    src="/anshul-cutout.png"
+                                    alt="Anshul Paliwal"
+                                    className="w-auto h-[62vh] sm:h-[72vh] md:h-[80vh] lg:h-[86vh] max-h-[660px] lg:max-h-[740px] object-contain object-bottom drop-shadow-[0_25px_50px_rgba(0,0,0,0.85)] select-none"
+                                />
+                            </div>
+
+                            {/* Flanking Content Columns */}
+                            <div className="relative z-20 flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-10 w-full px-2 sm:px-4">
 
                                 {/* Left Column: Identity & Bio Summary */}
-                                <div className="hero-left relative z-10 lg:z-30 w-full lg:max-w-sm xl:max-w-md flex flex-col justify-center space-y-3 sm:space-y-4 text-left">
+                                <div className="hero-left relative z-20 w-full lg:max-w-sm xl:max-w-md flex flex-col justify-center space-y-3 sm:space-y-4 text-left">
                                     <div className="flex items-center gap-2 font-mono text-[11px] sm:text-xs text-amber-400 tracking-[0.2em] uppercase">
                                         <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
                                         <span>Full-stack Developer</span>
@@ -461,7 +459,7 @@ export default function PortfolioPage({
                                 </div>
 
                                 {/* Right Column: Core Services & Action Button */}
-                                <div className="hero-right relative z-10 lg:z-30 w-full lg:max-w-sm xl:max-w-md flex flex-col justify-center space-y-4 text-left lg:text-right lg:items-end">
+                                <div className="hero-right relative z-20 w-full lg:max-w-sm xl:max-w-md flex flex-col justify-center space-y-4 text-left lg:text-right lg:items-end">
                                     <div className="space-y-1.5">
                                         <span className="font-mono text-[11px] sm:text-xs text-amber-400 tracking-[0.2em] uppercase block">
                                             Services & Focus
