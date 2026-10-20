@@ -388,7 +388,7 @@ export default function PortfolioPage({
                         <div className="absolute top-[60%] -right-20 sm:-right-28 md:-right-36 w-52 h-52 sm:w-68 sm:h-68 md:w-80 md:h-80 rounded-full border border-white/10 pointer-events-none"></div>
 
                         {/* Top Navigation */}
-                        <header className="hero-nav shrink-0 relative z-20 flex items-start justify-between">
+                        <header className="hero-nav shrink-0 relative z-30 flex items-center justify-between">
                             {/* Left: Brand Identity */}
                             <div className="font-sans">
                                 <span className="block text-white font-semibold text-base sm:text-lg md:text-xl leading-tight tracking-tight">Anshul</span>
@@ -407,65 +407,71 @@ export default function PortfolioPage({
                                 <a href="#contact" className="hover:text-white transition-colors duration-200">Contacts</a>
                             </nav>
 
-                            {/* Right: Clean minimal balance */}
-                            <div className="w-10 sm:w-16"></div>
+                            {/* Right: Let's Connect Button */}
+                            <div className="flex items-center">
+                                <a
+                                    href="#contact"
+                                    className="group relative inline-flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full border border-white/20 bg-white/[0.05] hover:bg-white text-xs sm:text-sm font-medium text-white hover:text-black transition-all duration-300 shadow-sm"
+                                >
+                                    <span>Let's Connect</span>
+                                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 group-hover:bg-emerald-600 animate-pulse"></span>
+                                    <svg className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
+                                    </svg>
+                                </a>
+                            </div>
                         </header>
 
-                        {/* Middle Content: 3-Column Layout with Anshul's Portrait in Center */}
+                        {/* Large Portrait Overlaid in the Center */}
+                        <div className="hero-portrait absolute left-1/2 bottom-12 md:bottom-14 lg:bottom-12 -translate-x-1/2 z-20 pointer-events-none flex justify-center items-end">
+                            <img
+                                src="/anshul.jpg"
+                                alt="Anshul Paliwal"
+                                style={{
+                                    maskImage: "linear-gradient(to bottom, black 80%, transparent 100%)",
+                                    WebkitMaskImage: "linear-gradient(to bottom, black 80%, transparent 100%)",
+                                }}
+                                className="w-auto h-[62vh] sm:h-[72vh] md:h-[80vh] lg:h-[88vh] max-h-[660px] lg:max-h-[740px] object-contain object-bottom drop-shadow-[0_20px_50px_rgba(0,0,0,0.9)] select-none"
+                            />
+                        </div>
+
+                        {/* Middle Content: Flanking Columns with Center Space for Large Portrait */}
                         <div className="relative z-10 my-auto flex-1 flex flex-col justify-center py-2 sm:py-3 w-full">
-                            <div className="grid grid-cols-1 lg:grid-cols-12 items-center gap-6 lg:gap-8 w-full">
+                            <div className="flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-10 w-full">
 
                                 {/* Left Column: Identity & Bio Summary */}
-                                <div className="hero-left lg:col-span-4 flex flex-col justify-center space-y-3 sm:space-y-4 text-left">
+                                <div className="hero-left relative z-10 lg:z-30 w-full lg:max-w-sm xl:max-w-md flex flex-col justify-center space-y-3 sm:space-y-4 text-left">
                                     <div className="flex items-center gap-2 font-mono text-[11px] sm:text-xs text-amber-400 tracking-[0.2em] uppercase">
                                         <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
                                         <span>Full-stack Developer</span>
                                     </div>
 
-                                    <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.05]">
+                                    <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.02]">
                                         Anshul <br />
                                         <span className="text-transparent stroke-text">Paliwal</span>
                                     </h1>
 
                                     <div className="w-16 h-1 bg-amber-400 rounded-full"></div>
 
-                                    <p className="text-white/75 text-xs sm:text-sm md:text-base leading-relaxed max-w-sm font-sans">
+                                    <p className="text-white/80 text-xs sm:text-sm md:text-base leading-relaxed max-w-sm font-sans drop-shadow-md">
                                         Backend-focused Computer Science student with hands-on experience building tested{" "}
                                         <span className="text-white italic font-normal">REST APIs</span> and{" "}
                                         <span className="text-white italic font-normal">full-stack features</span> in Java, Spring Boot, and Node.js.
                                     </p>
                                 </div>
 
-                                {/* Center Column: Anshul's Black Shirt Photo with Golden Halo */}
-                                <div className="hero-portrait lg:col-span-4 flex items-center justify-center relative my-2 lg:my-0">
-                                    {/* Ambient Glow */}
-                                    <div className="absolute w-52 h-52 sm:w-64 sm:h-64 md:w-80 md:h-80 rounded-full bg-amber-500/15 blur-3xl pointer-events-none"></div>
-
-                                    {/* Orbital Ring Accent */}
-                                    <div className="absolute w-56 h-56 sm:w-68 sm:h-68 md:w-80 md:h-80 lg:w-[20.5rem] lg:h-[20.5rem] rounded-full border border-amber-500/20 pointer-events-none"></div>
-
-                                    {/* Circular Frame for Portrait */}
-                                    <div className="relative z-10 w-48 h-48 sm:w-56 sm:h-56 md:w-68 md:h-68 lg:w-76 lg:h-76 xl:w-84 xl:h-84 rounded-full overflow-hidden border-2 border-amber-500/30 shadow-[0_0_45px_rgba(245,158,11,0.22)] group transition-all duration-500 hover:border-amber-400/60 hover:shadow-[0_0_65px_rgba(245,158,11,0.35)]">
-                                        <img
-                                            src="/anshul.jpg"
-                                            alt="Anshul Paliwal"
-                                            className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
-                                        />
-                                    </div>
-                                </div>
-
                                 {/* Right Column: Core Services & Action Button */}
-                                <div className="hero-right lg:col-span-4 flex flex-col justify-center space-y-4 text-left">
+                                <div className="hero-right relative z-10 lg:z-30 w-full lg:max-w-sm xl:max-w-md flex flex-col justify-center space-y-4 text-left lg:text-right lg:items-end">
                                     <div className="space-y-1.5">
                                         <span className="font-mono text-[11px] sm:text-xs text-amber-400 tracking-[0.2em] uppercase block">
                                             Services & Focus
                                         </span>
-                                        <h3 className="text-base sm:text-lg md:text-xl font-bold text-white leading-snug">
+                                        <h3 className="text-base sm:text-lg md:text-xl font-bold text-white leading-snug drop-shadow-md">
                                             Let's build scalable digital products and tested backend architectures.
                                         </h3>
                                     </div>
 
-                                    <p className="text-white/60 text-xs sm:text-sm leading-relaxed max-w-sm">
+                                    <p className="text-white/65 text-xs sm:text-sm leading-relaxed max-w-sm drop-shadow-md">
                                         Specializing in robust API design, database optimization, and high-performance full-stack web applications.
                                     </p>
 
@@ -491,7 +497,7 @@ export default function PortfolioPage({
                         </div>
 
                         {/* Bottom Bar: Core Tech Stack Dock & Contact Links */}
-                        <footer className="hero-bottom-bar shrink-0 relative z-10 w-full pt-2 sm:pt-3">
+                        <footer className="hero-bottom-bar shrink-0 relative z-30 w-full pt-2 sm:pt-3">
                             <div className="w-full bg-white/[0.02] border border-white/10 rounded-2xl p-2 sm:p-2.5 flex flex-col md:flex-row items-center justify-between gap-2.5">
                                 
                                 {/* Core Tech Pillars */}
