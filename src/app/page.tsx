@@ -347,6 +347,12 @@ export default function PortfolioPage({
                 "-=0.6"
             );
 
+            tl.fromTo(".hero-portrait",
+                { opacity: 0, scale: 0.9, y: 25 },
+                { opacity: 1, scale: 1, y: 0, duration: 1, ease: "back.out(1.2)" },
+                "-=0.7"
+            );
+
             tl.fromTo(".hero-badge",
                 { opacity: 0, scale: 0.8, x: 20 },
                 { opacity: 1, scale: 1, x: 0, duration: 0.8, ease: "back.out(1.5)" },
@@ -417,49 +423,77 @@ export default function PortfolioPage({
                             <div className="w-10 sm:w-16"></div>
                         </header>
 
-                        {/* Middle Content: Big Typographic Layout Adaptable to Screen Ratio */}
-                        <div className="relative z-10 my-auto flex-1 flex flex-col justify-center py-2 sm:py-4 gap-3 sm:gap-5 md:gap-8">
-                            {/* Row 1: Full-stack + Projects Pill Button */}
-                            <div className="flex flex-col md:flex-row md:items-center justify-between gap-3 sm:gap-4 md:gap-6">
-                                <h1
-                                    style={{ fontSize: "clamp(2.4rem, min(7.5vw, 12vh), 7rem)" }}
-                                    className="hero-title-top font-bold text-white tracking-[-0.035em] leading-[0.92]"
-                                >
-                                    Full-stack
-                                </h1>
-
-                                {/* Projects Pill + Circle Arrow Button */}
-                                <a
-                                    href="#projects"
-                                    className="hero-badge group self-start md:self-center flex items-center gap-2 sm:gap-2.5 cursor-pointer shrink-0"
-                                >
-                                    <div className="bg-white text-black px-6 sm:px-8 py-2.5 sm:py-3 rounded-full font-serif italic text-base sm:text-lg md:text-xl font-normal shadow-lg group-hover:bg-neutral-100 transition-all duration-300">
-                                        Projects
-                                    </div>
-                                    <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-13 md:h-13 rounded-full bg-white text-black flex items-center justify-center shadow-lg group-hover:scale-105 group-hover:translate-x-1 transition-all duration-300">
-                                        <svg className="w-4 h-4 sm:w-5 sm:h-5 transition-transform duration-300 group-hover:translate-x-0.5" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
-                                            <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-                                        </svg>
-                                    </div>
-                                </a>
-                            </div>
-
-                            {/* Row 2: Tagline + Developer */}
-                            <div className="flex flex-col md:flex-row md:items-end justify-between gap-3 sm:gap-4 md:gap-6">
-                                <p className="hero-tagline text-white/75 text-xs sm:text-sm md:text-base max-w-xs sm:max-w-sm md:max-w-md font-sans leading-relaxed tracking-normal">
-                                    Backend-focused Computer Science student with hands-on experience building tested{" "}
-                                    <span className="text-white italic font-normal">REST APIs</span> and{" "}
-                                    <span className="text-white italic font-normal">full-stack features</span> in Java, Spring Boot, and Node.js.
-                                </p>
-
-                                <div className="text-left md:text-right">
-                                    <h2
-                                        style={{ fontSize: "clamp(2.4rem, min(7.5vw, 12vh), 7rem)" }}
-                                        className="hero-title-bottom font-bold text-white tracking-[-0.035em] leading-[0.92]"
+                        {/* Middle Content: 3-column / Centered Portrait Layout */}
+                        <div className="relative z-10 my-auto flex-1 flex flex-col justify-center py-1 sm:py-2 w-full">
+                            <div className="grid grid-cols-1 lg:grid-cols-12 items-center gap-4 sm:gap-6 lg:gap-4 w-full">
+                                
+                                {/* Left Column: Full-stack headline & Bio tagline */}
+                                <div className="lg:col-span-4 flex flex-col justify-between h-full gap-3 sm:gap-6 lg:gap-8 order-1">
+                                    <h1
+                                        style={{ fontSize: "clamp(2.2rem, min(6.2vw, 9.5vh), 5.8rem)" }}
+                                        className="hero-title-top font-bold text-white tracking-[-0.035em] leading-[0.92]"
                                     >
-                                        Developer
-                                    </h2>
+                                        Full-stack
+                                    </h1>
+
+                                    <p className="hero-tagline text-white/75 text-xs sm:text-sm md:text-base max-w-xs sm:max-w-sm font-sans leading-relaxed tracking-normal">
+                                        Backend-focused Computer Science student with hands-on experience building tested{" "}
+                                        <span className="text-white italic font-normal">REST APIs</span> and{" "}
+                                        <span className="text-white italic font-normal">full-stack features</span> in Java, Spring Boot, and Node.js.
+                                    </p>
                                 </div>
+
+                                {/* Center Column: Anshul's Portrait with Celestial Ring */}
+                                <div className="lg:col-span-4 flex justify-center items-center py-2 lg:py-0 order-2">
+                                    <div className="hero-portrait relative group shrink-0 mx-auto">
+                                        {/* Amber / Golden Ambient Aura matching the portrait's celestial halo */}
+                                        <div className="absolute -inset-3 sm:-inset-4 rounded-[2.5rem] bg-gradient-to-b from-amber-500/25 via-amber-600/10 to-transparent blur-2xl opacity-75 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
+
+                                        <div className="relative h-[min(40vh,360px)] aspect-[4/5] rounded-[2rem] sm:rounded-[2.5rem] overflow-hidden border border-amber-500/35 bg-black shadow-[0_0_50px_rgba(245,158,11,0.22)] transition-all duration-500 group-hover:border-amber-400/60 group-hover:shadow-[0_0_70px_rgba(245,158,11,0.4)]">
+                                            <img
+                                                src="/anshul.jpg"
+                                                alt="Anshul Paliwal - Full-Stack Developer"
+                                                className="w-full h-full object-cover object-top filter contrast-[1.05] brightness-95 group-hover:scale-105 transition-transform duration-700 ease-out select-none"
+                                            />
+                                            {/* Subtle glass reflection gradient */}
+                                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-white/5 pointer-events-none"></div>
+
+                                            {/* Status Pill on bottom of portrait */}
+                                            <div className="absolute bottom-2.5 left-1/2 -translate-x-1/2 px-2.5 py-0.5 rounded-full bg-black/80 backdrop-blur-md border border-white/10 flex items-center gap-1.5 whitespace-nowrap shadow-lg">
+                                                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                                                <span className="font-mono text-[9px] sm:text-[10px] text-white/90 tracking-wider font-medium">AVAILABLE FOR WORK</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {/* Right Column: Projects Button & Developer */}
+                                <div className="lg:col-span-4 flex flex-col justify-between items-start lg:items-end h-full gap-3 sm:gap-6 lg:gap-8 order-3">
+                                    {/* Projects Pill + Circle Arrow Button */}
+                                    <a
+                                        href="#projects"
+                                        className="hero-badge group flex items-center gap-2 sm:gap-2.5 cursor-pointer shrink-0"
+                                    >
+                                        <div className="bg-white text-black px-5 sm:px-7 py-2 sm:py-2.5 rounded-full font-serif italic text-base sm:text-lg font-normal shadow-lg group-hover:bg-neutral-100 transition-all duration-300">
+                                            Projects
+                                        </div>
+                                        <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-white text-black flex items-center justify-center shadow-lg group-hover:scale-105 group-hover:translate-x-1 transition-all duration-300">
+                                            <svg className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
+                                                <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                                            </svg>
+                                        </div>
+                                    </a>
+
+                                    <div className="text-left lg:text-right">
+                                        <h2
+                                            style={{ fontSize: "clamp(2.2rem, min(6.2vw, 9.5vh), 5.8rem)" }}
+                                            className="hero-title-bottom font-bold text-white tracking-[-0.035em] leading-[0.92]"
+                                        >
+                                            Developer
+                                        </h2>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
 
