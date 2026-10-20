@@ -394,21 +394,16 @@ export default function PortfolioPage({
 
             <div className={`transition-opacity duration-700 ${loading ? 'opacity-0' : 'opacity-100'}`}>
 
-                {/* HERO SECTION MATCHING EXACT DESIGN */}
-                <section ref={heroRef} className="min-h-screen p-3 sm:p-5 md:p-8 flex flex-col justify-center relative z-20">
-                    <div className="hero-card relative w-full max-w-[1600px] mx-auto min-h-[92vh] lg:min-h-[90vh] bg-[#0c0c0c] border border-white/20 rounded-[2rem] sm:rounded-[2.5rem] md:rounded-[3rem] p-6 sm:p-10 md:p-14 lg:p-16 flex flex-col justify-between overflow-hidden shadow-2xl">
+                {/* HERO SECTION MATCHING EXACT DESIGN - SCREEN RATIO FIT */}
+                <section ref={heroRef} className="h-screen max-h-[100dvh] w-full p-2 sm:p-3.5 md:p-5 lg:p-6 flex flex-col justify-center items-center relative z-20 overflow-hidden box-border">
+                    <div className="hero-card relative w-full max-w-[1560px] h-full max-h-full bg-[#0c0c0c] border border-white/20 rounded-[1.75rem] sm:rounded-[2.25rem] md:rounded-[2.75rem] p-4 sm:p-6 md:p-8 lg:p-10 flex flex-col justify-between overflow-hidden shadow-2xl box-border">
 
-                        {/* Architectural Geometric Wireframe SVG Overlays */}
-                        <svg className="absolute inset-0 w-full h-full pointer-events-none select-none" xmlns="http://www.w3.org/2000/svg">
-                            {/* Top right arc intersecting the border and passing behind language selector */}
-                            <circle cx="96%" cy="2%" r="160" fill="none" stroke="rgba(255,255,255,0.18)" strokeWidth="1" />
-                            <circle cx="96%" cy="2%" r="260" fill="none" stroke="rgba(255,255,255,0.05)" strokeWidth="1" />
-                            {/* Right edge subtle secondary curve */}
-                            <circle cx="103%" cy="66%" r="130" fill="none" stroke="rgba(255,255,255,0.12)" strokeWidth="1" />
-                        </svg>
+                        {/* Architectural Geometric Wireframe Arcs */}
+                        <div className="absolute -top-16 -right-16 sm:-top-20 sm:-right-20 md:-top-24 md:-right-24 w-60 h-60 sm:w-80 sm:h-80 md:w-96 md:h-96 rounded-full border border-white/15 pointer-events-none"></div>
+                        <div className="absolute top-[60%] -right-20 sm:-right-28 md:-right-36 w-52 h-52 sm:w-68 sm:h-68 md:w-80 md:h-80 rounded-full border border-white/10 pointer-events-none"></div>
 
                         {/* Top Navigation */}
-                        <header className="hero-nav relative z-20 flex items-start justify-between">
+                        <header className="hero-nav shrink-0 relative z-20 flex items-start justify-between">
                             {/* Left: Name */}
                             <div className="font-sans">
                                 <span className="block text-white font-semibold text-base sm:text-lg md:text-xl leading-tight tracking-tight">Anshul</span>
@@ -444,24 +439,27 @@ export default function PortfolioPage({
                             </div>
                         </header>
 
-                        {/* Middle Content: Big Typographic Layout */}
-                        <div className="relative z-10 my-auto py-8 sm:py-12 md:py-14 flex flex-col gap-6 md:gap-12">
+                        {/* Middle Content: Big Typographic Layout Adaptable to Screen Ratio */}
+                        <div className="relative z-10 my-auto flex-1 flex flex-col justify-center py-2 sm:py-4 gap-3 sm:gap-5 md:gap-8">
                             {/* Row 1: Full-stack + Projects Pill Button */}
-                            <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
-                                <h1 className="hero-title-top text-5xl sm:text-7xl md:text-8xl lg:text-[7.5rem] xl:text-[9.5rem] font-bold text-white tracking-[-0.035em] leading-[0.92]">
+                            <div className="flex flex-col md:flex-row md:items-center justify-between gap-3 sm:gap-4 md:gap-6">
+                                <h1
+                                    style={{ fontSize: "clamp(2.4rem, min(7.5vw, 12vh), 7rem)" }}
+                                    className="hero-title-top font-bold text-white tracking-[-0.035em] leading-[0.92]"
+                                >
                                     Full-stack
                                 </h1>
 
                                 {/* Projects Pill + Circle Arrow Button */}
                                 <a
                                     href="#projects"
-                                    className="hero-badge group self-start md:self-center flex items-center gap-2.5 sm:gap-3 cursor-pointer shrink-0"
+                                    className="hero-badge group self-start md:self-center flex items-center gap-2 sm:gap-2.5 cursor-pointer shrink-0"
                                 >
-                                    <div className="bg-white text-black px-7 sm:px-9 py-3 sm:py-3.5 rounded-full font-serif italic text-lg sm:text-xl font-normal shadow-lg group-hover:bg-neutral-100 transition-all duration-300">
+                                    <div className="bg-white text-black px-6 sm:px-8 py-2.5 sm:py-3 rounded-full font-serif italic text-base sm:text-lg md:text-xl font-normal shadow-lg group-hover:bg-neutral-100 transition-all duration-300">
                                         Projects
                                     </div>
-                                    <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-white text-black flex items-center justify-center shadow-lg group-hover:scale-105 group-hover:translate-x-1 transition-all duration-300">
-                                        <svg className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-0.5" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
+                                    <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-13 md:h-13 rounded-full bg-white text-black flex items-center justify-center shadow-lg group-hover:scale-105 group-hover:translate-x-1 transition-all duration-300">
+                                        <svg className="w-4 h-4 sm:w-5 sm:h-5 transition-transform duration-300 group-hover:translate-x-0.5" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
                                             <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
                                         </svg>
                                     </div>
@@ -469,14 +467,17 @@ export default function PortfolioPage({
                             </div>
 
                             {/* Row 2: Tagline + Developer */}
-                            <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
-                                <p className="hero-tagline text-white/75 text-sm sm:text-base md:text-lg max-w-sm sm:max-w-md font-sans leading-relaxed tracking-normal">
+                            <div className="flex flex-col md:flex-row md:items-end justify-between gap-3 sm:gap-4 md:gap-6">
+                                <p className="hero-tagline text-white/75 text-xs sm:text-sm md:text-base max-w-xs sm:max-w-sm md:max-w-md font-sans leading-relaxed tracking-normal">
                                     My goal is to <span className="text-white italic font-normal">write maintainable, clean</span> and{" "}
                                     <span className="text-white italic font-normal">understandable code</span> to process development was enjoyable.
                                 </p>
 
                                 <div className="text-left md:text-right">
-                                    <h2 className="hero-title-bottom text-5xl sm:text-7xl md:text-8xl lg:text-[7.5rem] xl:text-[9.5rem] font-bold text-white tracking-[-0.035em] leading-[0.92]">
+                                    <h2
+                                        style={{ fontSize: "clamp(2.4rem, min(7.5vw, 12vh), 7rem)" }}
+                                        className="hero-title-bottom font-bold text-white tracking-[-0.035em] leading-[0.92]"
+                                    >
                                         Developer
                                     </h2>
                                 </div>
@@ -484,14 +485,14 @@ export default function PortfolioPage({
                         </div>
 
                         {/* Bottom Social Links Bar */}
-                        <footer className="relative z-10 flex flex-wrap items-center justify-start md:justify-center gap-2 sm:gap-3 pt-6 border-t border-white/5 md:border-none">
+                        <footer className="shrink-0 relative z-10 flex flex-wrap items-center justify-start md:justify-center gap-1.5 sm:gap-2.5 pt-2 sm:pt-3 border-t border-white/5 md:border-none">
                             {SOCIALS.map((social) => (
                                 <a
                                     key={social.name}
                                     href={social.href}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="hero-social rounded-full border border-white/15 bg-white/[0.03] backdrop-blur-sm px-4 sm:px-5 py-2 sm:py-2.5 flex items-center gap-2.5 text-xs sm:text-sm text-white/80 hover:text-white hover:border-white/40 hover:bg-white/[0.08] hover:scale-105 transition-all duration-300 cursor-pointer shadow-sm"
+                                    className="hero-social rounded-full border border-white/15 bg-white/[0.03] backdrop-blur-sm px-3.5 sm:px-4 md:px-5 py-1.5 sm:py-2 flex items-center gap-2 text-xs sm:text-sm text-white/80 hover:text-white hover:border-white/40 hover:bg-white/[0.08] hover:scale-105 transition-all duration-300 cursor-pointer shadow-sm"
                                 >
                                     <span className="text-white/90">{social.icon}</span>
                                     <span className="font-sans font-medium">{social.name}</span>
