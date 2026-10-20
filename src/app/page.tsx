@@ -36,10 +36,10 @@ const FEATURES = [
 
 const ABOUT_TEXT = "I AM ANSHUL PALIWAL, A FULL-STACK DEVELOPER WITH A FOCUS ON AI INTEGRATION. FROM REACT FRONTENDS TO SPRING BOOT BACKENDS, I BUILD INTUITIVE, HIGH-PERFORMANCE DIGITAL EXPERIENCES.";
 
-const SOCIALS = [
+const CONTACT_DETAILS = [
     {
         name: "Github",
-        href: "https://github.com",
+        href: "https://github.com/anshulpaliwal",
         icon: (
             <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
                 <path fillRule="evenodd" clipRule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
@@ -47,8 +47,8 @@ const SOCIALS = [
         ),
     },
     {
-        name: "Linkedin",
-        href: "https://linkedin.com",
+        name: "LinkedIn",
+        href: "https://linkedin.com/in/anshulpaliwal",
         icon: (
             <span className="font-bold text-[11px] bg-white text-black px-1 rounded-[2px] leading-none py-0.5 tracking-tighter">
                 in
@@ -56,29 +56,21 @@ const SOCIALS = [
         ),
     },
     {
-        name: "Telegram",
-        href: "https://t.me",
+        name: "anshulpaliwal0810@gmail.com",
+        href: "mailto:anshulpaliwal0810@gmail.com",
         icon: (
-            <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
-                <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z" />
+            <svg className="w-3.5 h-3.5 fill-none stroke-current" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
+                <rect width="20" height="16" x="2" y="4" rx="2" />
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
             </svg>
         ),
     },
     {
-        name: "Facebook",
-        href: "https://facebook.com",
+        name: "+91 9389937668",
+        href: "tel:+919389937668",
         icon: (
-            <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
-                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
-            </svg>
-        ),
-    },
-    {
-        name: "Instagram",
-        href: "https://instagram.com",
-        icon: (
-            <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
-                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+            <svg className="w-3.5 h-3.5 fill-none stroke-current" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
             </svg>
         ),
     },
@@ -325,7 +317,6 @@ export default function PortfolioPage({
     footerSubtitle = "AVAILABLE FOR COLLABORATION"
 }: PortfolioPageProps = {}) {
     const [loading, setLoading] = useState(true);
-    const [locale, setLocale] = useState<'En' | 'Ge'>('En');
     const heroRef = useRef<HTMLDivElement>(null);
 
     const handlePreloaderComplete = useCallback(() => {
@@ -414,29 +405,16 @@ export default function PortfolioPage({
                                 </div>
                             </div>
 
-                            {/* Center: Nav Links */}
+                            {/* Center: Nav Links matching Resume */}
                             <nav className="hidden md:flex items-center gap-8 lg:gap-14 text-sm lg:text-base text-white/60 font-sans tracking-wide">
                                 <a href="#about" className="hover:text-white transition-colors duration-200">About</a>
+                                <a href="#experience" className="hover:text-white transition-colors duration-200">Experience</a>
                                 <a href="#projects" className="hover:text-white transition-colors duration-200">Projects</a>
-                                <a href="#skills" className="hover:text-white transition-colors duration-200">Articles</a>
                                 <a href="#contact" className="hover:text-white transition-colors duration-200">Contacts</a>
                             </nav>
 
-                            {/* Right: Language switch */}
-                            <div className="text-right text-sm md:text-base font-sans tracking-tight select-none">
-                                <button
-                                    onClick={() => setLocale('En')}
-                                    className={`block text-right transition-colors cursor-pointer ${locale === 'En' ? 'text-white font-semibold' : 'text-white/40 hover:text-white/70'}`}
-                                >
-                                    En
-                                </button>
-                                <button
-                                    onClick={() => setLocale('Ge')}
-                                    className={`block text-right transition-colors cursor-pointer ${locale === 'Ge' ? 'text-white font-semibold' : 'text-white/40 hover:text-white/70'}`}
-                                >
-                                    Ge
-                                </button>
-                            </div>
+                            {/* Right: Clean minimal balance */}
+                            <div className="w-10 sm:w-16"></div>
                         </header>
 
                         {/* Middle Content: Big Typographic Layout Adaptable to Screen Ratio */}
@@ -469,8 +447,9 @@ export default function PortfolioPage({
                             {/* Row 2: Tagline + Developer */}
                             <div className="flex flex-col md:flex-row md:items-end justify-between gap-3 sm:gap-4 md:gap-6">
                                 <p className="hero-tagline text-white/75 text-xs sm:text-sm md:text-base max-w-xs sm:max-w-sm md:max-w-md font-sans leading-relaxed tracking-normal">
-                                    My goal is to <span className="text-white italic font-normal">write maintainable, clean</span> and{" "}
-                                    <span className="text-white italic font-normal">understandable code</span> to process development was enjoyable.
+                                    Backend-focused Computer Science student with hands-on experience building tested{" "}
+                                    <span className="text-white italic font-normal">REST APIs</span> and{" "}
+                                    <span className="text-white italic font-normal">full-stack features</span> in Java, Spring Boot, and Node.js.
                                 </p>
 
                                 <div className="text-left md:text-right">
@@ -484,18 +463,18 @@ export default function PortfolioPage({
                             </div>
                         </div>
 
-                        {/* Bottom Social Links Bar */}
+                        {/* Bottom Social / Contact Links Bar */}
                         <footer className="shrink-0 relative z-10 flex flex-wrap items-center justify-start md:justify-center gap-1.5 sm:gap-2.5 pt-2 sm:pt-3 border-t border-white/5 md:border-none">
-                            {SOCIALS.map((social) => (
+                            {CONTACT_DETAILS.map((contact) => (
                                 <a
-                                    key={social.name}
-                                    href={social.href}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
+                                    key={contact.name}
+                                    href={contact.href}
+                                    target={contact.href.startsWith("http") ? "_blank" : undefined}
+                                    rel={contact.href.startsWith("http") ? "noopener noreferrer" : undefined}
                                     className="hero-social rounded-full border border-white/15 bg-white/[0.03] backdrop-blur-sm px-3.5 sm:px-4 md:px-5 py-1.5 sm:py-2 flex items-center gap-2 text-xs sm:text-sm text-white/80 hover:text-white hover:border-white/40 hover:bg-white/[0.08] hover:scale-105 transition-all duration-300 cursor-pointer shadow-sm"
                                 >
-                                    <span className="text-white/90">{social.icon}</span>
-                                    <span className="font-sans font-medium">{social.name}</span>
+                                    <span className="text-white/90">{contact.icon}</span>
+                                    <span className="font-sans font-medium">{contact.name}</span>
                                 </a>
                             ))}
                         </footer>
@@ -512,6 +491,42 @@ export default function PortfolioPage({
                         <h3 className="text-2xl md:text-5xl font-mono text-white/90 leading-tight uppercase font-medium tracking-tight">
                             <TypeReveal text={aboutText} />
                         </h3>
+                    </div>
+                </section>
+
+                {/* EXPERIENCE SECTION */}
+                <section id="experience" className="min-h-[60vh] flex flex-col justify-center relative z-10 px-6 sm:px-8 py-20 max-w-7xl mx-auto w-full">
+                    <div className="mb-12">
+                        <span className="font-mono text-red-500 text-xs sm:text-sm tracking-[0.5em] uppercase block">CAREER TIMELINE</span>
+                        <h2 className="text-3xl sm:text-5xl md:text-6xl font-black uppercase tracking-tighter text-white mt-2">Experience</h2>
+                    </div>
+
+                    <div className="space-y-6">
+                        <div className="group border border-white/10 bg-white/[0.02] p-6 sm:p-8 rounded-2xl hover:border-white/25 transition-all duration-300">
+                            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
+                                <div>
+                                    <h3 className="text-xl sm:text-2xl font-bold text-white group-hover:text-red-500 transition-colors">
+                                        Full-Stack / Backend Developer Intern
+                                    </h3>
+                                    <p className="font-mono text-xs sm:text-sm text-white/50 mt-1">
+                                        REST APIs • Java • Spring Boot • Node.js
+                                    </p>
+                                </div>
+                                <div className="font-mono text-xs sm:text-sm text-white/40 border border-white/10 px-3 py-1 rounded-full self-start sm:self-center">
+                                    INTERNSHIP EXPERIENCE
+                                </div>
+                            </div>
+                            <p className="font-sans text-sm sm:text-base text-white/70 leading-relaxed max-w-4xl">
+                                Built and tested scalable REST APIs and full-stack features utilizing Java, Spring Boot, and Node.js. Integrated relational and NoSQL databases (PostgreSQL and MongoDB) and developed interactive frontend components with React.
+                            </p>
+                            <div className="flex flex-wrap gap-2 mt-6">
+                                {["Java", "Spring Boot", "REST APIs", "Node.js", "PostgreSQL", "MongoDB", "React", "Next.js"].map((tech) => (
+                                    <span key={tech} className="font-mono text-[11px] text-white/60 bg-white/5 border border-white/10 px-2.5 py-1 rounded-md">
+                                        {tech}
+                                    </span>
+                                ))}
+                            </div>
+                        </div>
                     </div>
                 </section>
 
