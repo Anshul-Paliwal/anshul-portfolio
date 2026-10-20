@@ -341,39 +341,27 @@ export default function PortfolioPage({
                 "-=0.6"
             );
 
-            tl.fromTo(".hero-title-top",
-                { opacity: 0, y: 60, filter: "blur(10px)" },
-                { opacity: 1, y: 0, filter: "blur(0px)", duration: 1 },
-                "-=0.6"
-            );
-
-            tl.fromTo(".hero-portrait",
-                { opacity: 0, scale: 0.9, y: 25 },
-                { opacity: 1, scale: 1, y: 0, duration: 1, ease: "back.out(1.2)" },
-                "-=0.7"
-            );
-
-            tl.fromTo(".hero-badge",
-                { opacity: 0, scale: 0.8, x: 20 },
-                { opacity: 1, scale: 1, x: 0, duration: 0.8, ease: "back.out(1.5)" },
-                "-=0.7"
-            );
-
-            tl.fromTo(".hero-tagline",
-                { opacity: 0, y: 30 },
-                { opacity: 1, y: 0, duration: 0.8 },
+            tl.fromTo(".hero-left",
+                { opacity: 0, x: -30, filter: "blur(8px)" },
+                { opacity: 1, x: 0, filter: "blur(0px)", duration: 0.9 },
                 "-=0.5"
             );
 
-            tl.fromTo(".hero-title-bottom",
-                { opacity: 0, y: 60, filter: "blur(10px)" },
-                { opacity: 1, y: 0, filter: "blur(0px)", duration: 1 },
+            tl.fromTo(".hero-portrait",
+                { opacity: 0, scale: 0.85, filter: "blur(10px)" },
+                { opacity: 1, scale: 1, filter: "blur(0px)", duration: 1, ease: "back.out(1.2)" },
                 "-=0.7"
             );
 
-            tl.fromTo(".hero-social",
+            tl.fromTo(".hero-right",
+                { opacity: 0, x: 30, filter: "blur(8px)" },
+                { opacity: 1, x: 0, filter: "blur(0px)", duration: 0.9 },
+                "-=0.7"
+            );
+
+            tl.fromTo(".hero-bottom-bar",
                 { opacity: 0, y: 20 },
-                { opacity: 1, y: 0, duration: 0.6, stagger: 0.08 },
+                { opacity: 1, y: 0, duration: 0.7 },
                 "-=0.5"
             );
         }, heroRef);
@@ -391,7 +379,7 @@ export default function PortfolioPage({
 
             <div className={`transition-opacity duration-700 ${loading ? 'opacity-0' : 'opacity-100'}`}>
 
-                {/* HERO SECTION MATCHING EXACT DESIGN - SCREEN RATIO FIT */}
+                {/* HERO SECTION MATCHING REFERENCE DESIGN WITH CENTER PORTRAIT */}
                 <section ref={heroRef} className="h-screen max-h-[100dvh] w-full p-2 sm:p-3.5 md:p-5 lg:p-6 flex flex-col justify-center items-center relative z-20 overflow-hidden box-border">
                     <div className="hero-card relative w-full max-w-[1560px] h-full max-h-full bg-[#0c0c0c] border border-white/20 rounded-[1.75rem] sm:rounded-[2.25rem] md:rounded-[2.75rem] p-4 sm:p-6 md:p-8 lg:p-10 flex flex-col justify-between overflow-hidden shadow-2xl box-border">
 
@@ -401,12 +389,12 @@ export default function PortfolioPage({
 
                         {/* Top Navigation */}
                         <header className="hero-nav shrink-0 relative z-20 flex items-start justify-between">
-                            {/* Left: Name */}
+                            {/* Left: Brand Identity */}
                             <div className="font-sans">
                                 <span className="block text-white font-semibold text-base sm:text-lg md:text-xl leading-tight tracking-tight">Anshul</span>
                                 <span className="block text-white/90 font-semibold text-base sm:text-lg md:text-xl leading-tight tracking-tight">Paliwal</span>
                                 <div className="flex items-center gap-1.5 mt-1 font-mono text-[10px] text-white/40 tracking-wider">
-                                    <span className="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse"></span>
+                                    <span className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse"></span>
                                     <span>IN // DEHRADUN</span>
                                 </div>
                             </div>
@@ -423,94 +411,124 @@ export default function PortfolioPage({
                             <div className="w-10 sm:w-16"></div>
                         </header>
 
-                        {/* Middle Content: 3-column / Centered Portrait Layout */}
-                        <div className="relative z-10 my-auto flex-1 flex flex-col justify-center py-1 sm:py-2 w-full">
-                            <div className="grid grid-cols-1 lg:grid-cols-12 items-center gap-4 sm:gap-6 lg:gap-4 w-full">
-                                
-                                {/* Left Column: Full-stack headline & Bio tagline */}
-                                <div className="lg:col-span-4 flex flex-col justify-between h-full gap-3 sm:gap-6 lg:gap-8 order-1">
-                                    <h1
-                                        style={{ fontSize: "clamp(2.2rem, min(6.2vw, 9.5vh), 5.8rem)" }}
-                                        className="hero-title-top font-bold text-white tracking-[-0.035em] leading-[0.92]"
-                                    >
-                                        Full-stack
+                        {/* Middle Content: 3-Column Layout with Anshul's Portrait in Center */}
+                        <div className="relative z-10 my-auto flex-1 flex flex-col justify-center py-2 sm:py-3 w-full">
+                            <div className="grid grid-cols-1 lg:grid-cols-12 items-center gap-6 lg:gap-8 w-full">
+
+                                {/* Left Column: Identity & Bio Summary */}
+                                <div className="hero-left lg:col-span-4 flex flex-col justify-center space-y-3 sm:space-y-4 text-left">
+                                    <div className="flex items-center gap-2 font-mono text-[11px] sm:text-xs text-amber-400 tracking-[0.2em] uppercase">
+                                        <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
+                                        <span>Full-stack Developer</span>
+                                    </div>
+
+                                    <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.05]">
+                                        Anshul <br />
+                                        <span className="text-transparent stroke-text">Paliwal</span>
                                     </h1>
 
-                                    <p className="hero-tagline text-white/75 text-xs sm:text-sm md:text-base max-w-xs sm:max-w-sm font-sans leading-relaxed tracking-normal">
+                                    <div className="w-16 h-1 bg-amber-400 rounded-full"></div>
+
+                                    <p className="text-white/75 text-xs sm:text-sm md:text-base leading-relaxed max-w-sm font-sans">
                                         Backend-focused Computer Science student with hands-on experience building tested{" "}
                                         <span className="text-white italic font-normal">REST APIs</span> and{" "}
                                         <span className="text-white italic font-normal">full-stack features</span> in Java, Spring Boot, and Node.js.
                                     </p>
                                 </div>
 
-                                {/* Center Column: Anshul's Portrait with Celestial Ring */}
-                                <div className="lg:col-span-4 flex justify-center items-center py-2 lg:py-0 order-2">
-                                    <div className="hero-portrait relative group shrink-0 mx-auto">
-                                        {/* Amber / Golden Ambient Aura matching the portrait's celestial halo */}
-                                        <div className="absolute -inset-3 sm:-inset-4 rounded-[2.5rem] bg-gradient-to-b from-amber-500/25 via-amber-600/10 to-transparent blur-2xl opacity-75 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
+                                {/* Center Column: Anshul's Black Shirt Photo with Golden Halo */}
+                                <div className="hero-portrait lg:col-span-4 flex items-center justify-center relative my-2 lg:my-0">
+                                    {/* Ambient Glow */}
+                                    <div className="absolute w-52 h-52 sm:w-64 sm:h-64 md:w-80 md:h-80 rounded-full bg-amber-500/15 blur-3xl pointer-events-none"></div>
 
-                                        <div className="relative h-[min(40vh,360px)] aspect-[4/5] rounded-[2rem] sm:rounded-[2.5rem] overflow-hidden border border-amber-500/35 bg-black shadow-[0_0_50px_rgba(245,158,11,0.22)] transition-all duration-500 group-hover:border-amber-400/60 group-hover:shadow-[0_0_70px_rgba(245,158,11,0.4)]">
-                                            <img
-                                                src="/anshul.jpg"
-                                                alt="Anshul Paliwal - Full-Stack Developer"
-                                                className="w-full h-full object-cover object-top filter contrast-[1.05] brightness-95 group-hover:scale-105 transition-transform duration-700 ease-out select-none"
-                                            />
-                                            {/* Subtle glass reflection gradient */}
-                                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-white/5 pointer-events-none"></div>
+                                    {/* Orbital Ring Accent */}
+                                    <div className="absolute w-56 h-56 sm:w-68 sm:h-68 md:w-80 md:h-80 lg:w-[20.5rem] lg:h-[20.5rem] rounded-full border border-amber-500/20 pointer-events-none"></div>
 
-                                            {/* Status Pill on bottom of portrait */}
-                                            <div className="absolute bottom-2.5 left-1/2 -translate-x-1/2 px-2.5 py-0.5 rounded-full bg-black/80 backdrop-blur-md border border-white/10 flex items-center gap-1.5 whitespace-nowrap shadow-lg">
-                                                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-                                                <span className="font-mono text-[9px] sm:text-[10px] text-white/90 tracking-wider font-medium">AVAILABLE FOR WORK</span>
-                                            </div>
-                                        </div>
+                                    {/* Circular Frame for Portrait */}
+                                    <div className="relative z-10 w-48 h-48 sm:w-56 sm:h-56 md:w-68 md:h-68 lg:w-76 lg:h-76 xl:w-84 xl:h-84 rounded-full overflow-hidden border-2 border-amber-500/30 shadow-[0_0_45px_rgba(245,158,11,0.22)] group transition-all duration-500 hover:border-amber-400/60 hover:shadow-[0_0_65px_rgba(245,158,11,0.35)]">
+                                        <img
+                                            src="/anshul.jpg"
+                                            alt="Anshul Paliwal"
+                                            className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
+                                        />
                                     </div>
                                 </div>
 
-                                {/* Right Column: Projects Button & Developer */}
-                                <div className="lg:col-span-4 flex flex-col justify-between items-start lg:items-end h-full gap-3 sm:gap-6 lg:gap-8 order-3">
-                                    {/* Projects Pill + Circle Arrow Button */}
-                                    <a
-                                        href="#projects"
-                                        className="hero-badge group flex items-center gap-2 sm:gap-2.5 cursor-pointer shrink-0"
-                                    >
-                                        <div className="bg-white text-black px-5 sm:px-7 py-2 sm:py-2.5 rounded-full font-serif italic text-base sm:text-lg font-normal shadow-lg group-hover:bg-neutral-100 transition-all duration-300">
-                                            Projects
-                                        </div>
-                                        <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-white text-black flex items-center justify-center shadow-lg group-hover:scale-105 group-hover:translate-x-1 transition-all duration-300">
-                                            <svg className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
-                                                <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-                                            </svg>
-                                        </div>
-                                    </a>
+                                {/* Right Column: Core Services & Action Button */}
+                                <div className="hero-right lg:col-span-4 flex flex-col justify-center space-y-4 text-left">
+                                    <div className="space-y-1.5">
+                                        <span className="font-mono text-[11px] sm:text-xs text-amber-400 tracking-[0.2em] uppercase block">
+                                            Services & Focus
+                                        </span>
+                                        <h3 className="text-base sm:text-lg md:text-xl font-bold text-white leading-snug">
+                                            Let's build scalable digital products and tested backend architectures.
+                                        </h3>
+                                    </div>
 
-                                    <div className="text-left lg:text-right">
-                                        <h2
-                                            style={{ fontSize: "clamp(2.2rem, min(6.2vw, 9.5vh), 5.8rem)" }}
-                                            className="hero-title-bottom font-bold text-white tracking-[-0.035em] leading-[0.92]"
+                                    <p className="text-white/60 text-xs sm:text-sm leading-relaxed max-w-sm">
+                                        Specializing in robust API design, database optimization, and high-performance full-stack web applications.
+                                    </p>
+
+                                    {/* Projects Action Button */}
+                                    <div className="pt-1">
+                                        <a
+                                            href="#projects"
+                                            className="hero-badge group inline-flex items-center gap-2.5 cursor-pointer"
                                         >
-                                            Developer
-                                        </h2>
+                                            <div className="bg-white text-black px-6 sm:px-7 py-2.5 sm:py-3 rounded-full font-serif italic text-base sm:text-lg font-normal shadow-lg group-hover:bg-amber-400 transition-all duration-300">
+                                                Projects
+                                            </div>
+                                            <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-white text-black flex items-center justify-center shadow-lg group-hover:bg-amber-400 group-hover:scale-105 group-hover:translate-x-1 transition-all duration-300">
+                                                <svg className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                                                </svg>
+                                            </div>
+                                        </a>
                                     </div>
                                 </div>
 
                             </div>
                         </div>
 
-                        {/* Bottom Social / Contact Links Bar */}
-                        <footer className="shrink-0 relative z-10 flex flex-wrap items-center justify-start md:justify-center gap-1.5 sm:gap-2.5 pt-2 sm:pt-3 border-t border-white/5 md:border-none">
-                            {CONTACT_DETAILS.map((contact) => (
-                                <a
-                                    key={contact.name}
-                                    href={contact.href}
-                                    target={contact.href.startsWith("http") ? "_blank" : undefined}
-                                    rel={contact.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                                    className="hero-social rounded-full border border-white/15 bg-white/[0.03] backdrop-blur-sm px-3.5 sm:px-4 md:px-5 py-1.5 sm:py-2 flex items-center gap-2 text-xs sm:text-sm text-white/80 hover:text-white hover:border-white/40 hover:bg-white/[0.08] hover:scale-105 transition-all duration-300 cursor-pointer shadow-sm"
-                                >
-                                    <span className="text-white/90">{contact.icon}</span>
-                                    <span className="font-sans font-medium">{contact.name}</span>
-                                </a>
-                            ))}
+                        {/* Bottom Bar: Core Tech Stack Dock & Contact Links */}
+                        <footer className="hero-bottom-bar shrink-0 relative z-10 w-full pt-2 sm:pt-3">
+                            <div className="w-full bg-white/[0.02] border border-white/10 rounded-2xl p-2 sm:p-2.5 flex flex-col md:flex-row items-center justify-between gap-2.5">
+                                
+                                {/* Core Tech Pillars */}
+                                <div className="flex flex-wrap items-center justify-center md:justify-start gap-1.5 sm:gap-2">
+                                    {[
+                                        { name: "Java • Spring Boot" },
+                                        { name: "React • Next.js" },
+                                        { name: "Node.js • REST APIs" },
+                                        { name: "PostgreSQL • MongoDB" }
+                                    ].map((tech) => (
+                                        <div
+                                            key={tech.name}
+                                            className="bg-white/[0.04] border border-white/10 hover:border-amber-400/40 rounded-xl px-3 py-1.5 flex items-center gap-2 transition-all"
+                                        >
+                                            <span className="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
+                                            <span className="font-mono font-medium text-[11px] sm:text-xs text-white/90">{tech.name}</span>
+                                        </div>
+                                    ))}
+                                </div>
+
+                                {/* Contact Links */}
+                                <div className="flex flex-wrap items-center justify-center md:justify-end gap-1.5 sm:gap-2">
+                                    {CONTACT_DETAILS.map((contact) => (
+                                        <a
+                                            key={contact.name}
+                                            href={contact.href}
+                                            target={contact.href.startsWith("http") ? "_blank" : undefined}
+                                            rel={contact.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                                            className="rounded-xl border border-white/10 bg-white/[0.03] px-3 py-1.5 flex items-center gap-2 text-xs text-white/70 hover:text-white hover:border-amber-400/50 hover:bg-amber-400/10 transition-all duration-300 cursor-pointer shadow-sm"
+                                        >
+                                            <span className="text-white/90">{contact.icon}</span>
+                                            <span className="font-sans font-medium text-[11px] sm:text-xs">{contact.name}</span>
+                                        </a>
+                                    ))}
+                                </div>
+
+                            </div>
                         </footer>
 
                     </div>
