@@ -438,18 +438,17 @@ export default function PortfolioPage({
                             <div className="relative z-20 flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-10 w-full px-2 sm:px-4">
 
                                 {/* Left Column: Identity & Bio Summary */}
-                                <div className="hero-left relative z-20 w-full lg:max-w-md xl:max-w-lg flex flex-col justify-center space-y-2.5 sm:space-y-3.5 text-left">
-                                    <div className="flex items-center gap-2 font-mono text-[11px] sm:text-xs text-amber-400 tracking-[0.2em] uppercase">
-                                        <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
+                                <div className="hero-left relative z-20 w-full lg:max-w-lg xl:max-w-xl 2xl:max-w-2xl flex flex-col justify-center space-y-2.5 sm:space-y-3.5 text-left">
+                                    <div className="font-mono text-[11px] sm:text-xs text-amber-400 tracking-[0.2em] uppercase">
                                         <span>Full-stack Developer</span>
                                     </div>
 
-                                    <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[5.25rem] 2xl:text-[6.25rem] font-black text-white tracking-tighter leading-[0.94]">
+                                    <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[6.5rem] 2xl:text-[7.5rem] font-black text-white tracking-tighter leading-[0.9]">
                                         Anshul <br />
                                         <span className="text-transparent stroke-text">Paliwal</span>
                                     </h1>
 
-                                    <div className="w-20 h-1 sm:h-1.5 bg-amber-400 rounded-full"></div>
+                                    <div className="w-24 h-1 sm:h-1.5 bg-amber-400 rounded-full"></div>
 
                                     <p className="text-white/80 text-xs sm:text-sm md:text-base leading-relaxed max-w-sm font-sans drop-shadow-md">
                                         Backend-focused Computer Science student with hands-on experience building tested{" "}
