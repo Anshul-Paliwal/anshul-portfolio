@@ -152,10 +152,10 @@ export default function ContactsPage() {
                                     Send An Inquiry
                                 </span>
                                 <h3 className="text-2xl sm:text-3xl font-black text-white tracking-tight">
-                                    Let's build something together.
+                                    Let&apos;s build something together.
                                 </h3>
                                 <p className="text-white/60 text-xs sm:text-sm mt-2 leading-relaxed">
-                                    Leave a message below, and I'll get back to you within 24 hours.
+                                    Leave a message below, and I&apos;ll get back to you within 24 hours.
                                 </p>
                             </div>
 
@@ -166,7 +166,7 @@ export default function ContactsPage() {
                                     </div>
                                     <h4 className="text-xl font-bold text-white">Message Transmitted</h4>
                                     <p className="text-sm text-white/60 max-w-sm mx-auto">
-                                        Thank you, {formData.name || 'friend'}. I've received your note and will be in touch shortly.
+                                        Thank you, {formData.name || 'friend'}. I&apos;ve received your note and will be in touch shortly.
                                     </p>
                                     <button
                                         onClick={() => {

@@ -65,7 +65,7 @@ export default function Navbar({ currentPath = '/' }: NavbarProps) {
                         href="/contacts"
                         className="group relative inline-flex items-center gap-2 px-3.5 sm:px-5 py-1.5 sm:py-2.5 rounded-full border border-white/20 bg-white/[0.05] hover:bg-red-600 hover:border-red-600 text-xs sm:text-sm font-medium text-white transition-all duration-300 shadow-sm whitespace-nowrap"
                     >
-                        <span className="sm:inline hidden">Let's Connect</span>
+                        <span className="sm:inline hidden">Let&apos;s Connect</span>
                         <span className="sm:hidden inline">Connect</span>
                         <svg className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />

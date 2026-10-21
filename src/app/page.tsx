@@ -421,7 +421,7 @@ export default function PortfolioPage({
                                 <div className="hero-left relative z-20 w-full lg:max-w-lg xl:max-w-xl 2xl:max-w-2xl flex flex-col justify-center space-y-2.5 sm:space-y-3.5 text-left">
                                     <div className="flex items-center gap-2.5">
                                         <span className="font-serif italic text-lg sm:text-xl md:text-2xl text-red-500 font-normal tracking-wide">
-                                            I'm
+                                            I&apos;m
                                         </span>
                                         <span className="h-px w-8 sm:w-10 bg-red-600/50"></span>
                                     </div>
@@ -447,7 +447,7 @@ export default function PortfolioPage({
                                             Services & Focus
                                         </span>
                                         <h3 className="text-base sm:text-lg md:text-xl font-bold text-white leading-snug drop-shadow-md">
-                                            Let's build scalable digital products and tested backend architectures.
+                                            Let&apos;s build scalable digital products and tested backend architectures.
                                         </h3>
                                     </div>
 

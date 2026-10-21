@@ -1,6 +1,5 @@
 'use client';
 
-/* eslint-disable @next/next/no-img-element */
 import React from 'react';
 import Link from 'next/link';
 import Navbar from '@/components/Navbar';
@@ -126,7 +125,7 @@ export default function AboutPage() {
                         {/* Narrative Section */}
                         <div className="bg-[#0c0c0c] border border-white/10 rounded-3xl p-6 sm:p-10 shadow-2xl">
                             <div className="flex items-center gap-2 mb-4">
-                                <span className="font-serif italic text-xl text-red-500 font-normal">I'm</span>
+                                <span className="font-serif italic text-xl text-red-500 font-normal">I&apos;m</span>
                                 <span className="h-px w-10 bg-red-600/50"></span>
                             </div>
 

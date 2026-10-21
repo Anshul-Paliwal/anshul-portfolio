@@ -752,10 +752,9 @@ const Lanyard = ({
   style
 }) => {
   const containerRef = useRef(null);
-  const settingsRef = useRef(null);
   const applyRef = useRef(null);
 
-  settingsRef.current = {
+  const currentSettings = {
     frontImage,
     backImage,
     imageFit: imageFit === 'contain' ? 'contain' : 'cover',
@@ -777,8 +776,10 @@ const Lanyard = ({
     interactive,
     intro
   };
+  const settingsRef = useRef(currentSettings);
 
   useEffect(() => {
+    settingsRef.current = currentSettings;
     applyRef.current?.();
   });
 
