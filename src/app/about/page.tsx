@@ -4,6 +4,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Navbar from '@/components/Navbar';
+import Lanyard from '@/components/Lanyard';
 
 export default function AboutPage() {
     return (
@@ -39,16 +40,32 @@ export default function AboutPage() {
                             {/* Ambient Top Glow */}
                             <div className="absolute -top-24 -left-24 w-48 h-48 bg-red-600/10 rounded-full blur-3xl pointer-events-none"></div>
 
-                            {/* Center Portrait */}
-                            <div className="relative w-full h-80 sm:h-96 rounded-2xl overflow-hidden bg-black/40 border border-white/5 flex items-end justify-center mb-6">
-                                <img
-                                    src="/anshul-white-shirt-fade.png"
-                                    alt="Anshul Paliwal"
-                                    className="w-auto h-full max-h-full object-contain object-bottom select-none drop-shadow-[0_15px_30px_rgba(0,0,0,0.9)]"
+                            {/* Center Portrait - Interactive 3D Lanyard Badge */}
+                            <div className="relative w-full h-80 sm:h-[420px] rounded-2xl overflow-hidden bg-black/40 border border-white/5 mb-6">
+                                <Lanyard
+                                    frontImage="/anshul-black-tee.jpg"
+                                    backImage="/card-back.svg"
+                                    cardColor="#0a0a0a"
+                                    strapColor="#e7000b"
+                                    metal="silver"
+                                    finish="glossy"
+                                    orientation="portrait"
+                                    size={0.65}
+                                    strapLength={0.45}
+                                    strapWidth={0.65}
+                                    gravity={1}
+                                    damping={0.5}
+                                    elasticity={0.55}
+                                    breeze={0.4}
+                                    interactive={true}
+                                    intro={true}
                                 />
-                                <div className="absolute top-3 left-3 bg-black/60 backdrop-blur-md border border-white/10 rounded-full px-3 py-1 flex items-center gap-2">
+                                <div className="absolute top-3 left-3 pointer-events-none bg-black/60 backdrop-blur-md border border-white/10 rounded-full px-3 py-1 flex items-center gap-2 z-10">
                                     <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
                                     <span className="font-mono text-[11px] text-white/90">AVAILABLE FOR ROLES</span>
+                                </div>
+                                <div className="absolute bottom-3 right-3 pointer-events-none bg-black/50 backdrop-blur-md border border-white/5 rounded-full px-2.5 py-0.5 flex items-center gap-1.5 z-10 opacity-70">
+                                    <span className="font-mono text-[10px] text-white/60">INTERACTIVE BADGE</span>
                                 </div>
                             </div>
 

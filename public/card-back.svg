@@ -1,0 +1,74 @@
+<svg width="682" height="1024" viewBox="0 0 682 1024" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#141416" />
+      <stop offset="100%" stop-color="#070708" />
+    </linearGradient>
+    <linearGradient id="redGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#e7000b" />
+      <stop offset="100%" stop-color="#ff3b30" />
+    </linearGradient>
+  </defs>
+  <rect width="682" height="1024" fill="url(#bg)" rx="28" />
+  <rect x="20" y="20" width="642" height="984" fill="none" stroke="#ffffff" stroke-opacity="0.08" stroke-width="2" rx="20" />
+  <rect x="30" y="30" width="622" height="8" fill="url(#redGrad)" rx="4" />
+  
+  <!-- Top Branding -->
+  <text x="341" y="160" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="24" fill="#e7000b" font-weight="900" text-anchor="middle" letter-spacing="8">[ ANSH • ]</text>
+  <text x="341" y="225" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="38" fill="#ffffff" font-weight="900" text-anchor="middle" letter-spacing="2">ANSHUL PALIWAL</text>
+  <text x="341" y="265" font-family="monospace" font-size="16" fill="#ffffff" fill-opacity="0.6" text-anchor="middle" letter-spacing="4">FULL-STACK DEVELOPER</text>
+  
+  <line x1="70" y1="310" x2="612" y2="310" stroke="#ffffff" stroke-opacity="0.12" stroke-width="1" />
+  
+  <!-- Specs -->
+  <text x="90" y="380" font-family="monospace" font-size="14" fill="#e7000b" letter-spacing="2">PASSPORT / ID</text>
+  <text x="90" y="415" font-family="monospace" font-size="22" fill="#ffffff" font-weight="bold" letter-spacing="1">AP-2026-DEV-01</text>
+  
+  <text x="90" y="480" font-family="monospace" font-size="14" fill="#e7000b" letter-spacing="2">CORE CAPABILITIES</text>
+  <text x="90" y="515" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="19" fill="#ffffff" font-weight="600">Spring Boot • Node.js • React • Three.js</text>
+  
+  <text x="90" y="580" font-family="monospace" font-size="14" fill="#e7000b" letter-spacing="2">SECURITY CLEARANCE</text>
+  <text x="90" y="615" font-family="monospace" font-size="19" fill="#ffffff" font-weight="bold">LEVEL 05 // SYSTEM ARCHITECT</text>
+
+  <text x="90" y="680" font-family="monospace" font-size="14" fill="#e7000b" letter-spacing="2">DIRECT CONTACT</text>
+  <text x="90" y="715" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="17" fill="#ffffff" font-weight="500">anshulpaliwal0810@gmail.com</text>
+
+  <!-- Mock Barcode Container -->
+  <g transform="translate(90, 780)">
+    <rect x="0" y="0" width="502" height="76" fill="#ffffff" fill-opacity="0.04" rx="10" stroke="#ffffff" stroke-opacity="0.08" stroke-width="1" />
+    <line x1="30" y1="18" x2="30" y2="58" stroke="#ffffff" stroke-width="4" stroke-opacity="0.8" />
+    <line x1="40" y1="18" x2="40" y2="58" stroke="#ffffff" stroke-width="2" stroke-opacity="0.8" />
+    <line x1="50" y1="18" x2="50" y2="58" stroke="#ffffff" stroke-width="6" stroke-opacity="0.8" />
+    <line x1="65" y1="18" x2="65" y2="58" stroke="#ffffff" stroke-width="3" stroke-opacity="0.8" />
+    <line x1="78" y1="18" x2="78" y2="58" stroke="#ffffff" stroke-width="5" stroke-opacity="0.8" />
+    <line x1="92" y1="18" x2="92" y2="58" stroke="#ffffff" stroke-width="2" stroke-opacity="0.8" />
+    <line x1="104" y1="18" x2="104" y2="58" stroke="#ffffff" stroke-width="7" stroke-opacity="0.8" />
+    <line x1="120" y1="18" x2="120" y2="58" stroke="#ffffff" stroke-width="3" stroke-opacity="0.8" />
+    <line x1="135" y1="18" x2="135" y2="58" stroke="#ffffff" stroke-width="5" stroke-opacity="0.8" />
+    <line x1="150" y1="18" x2="150" y2="58" stroke="#ffffff" stroke-width="2" stroke-opacity="0.8" />
+    <line x1="162" y1="18" x2="162" y2="58" stroke="#ffffff" stroke-width="6" stroke-opacity="0.8" />
+    <line x1="178" y1="18" x2="178" y2="58" stroke="#ffffff" stroke-width="4" stroke-opacity="0.8" />
+    <line x1="195" y1="18" x2="195" y2="58" stroke="#ffffff" stroke-width="5" stroke-opacity="0.8" />
+    <line x1="210" y1="18" x2="210" y2="58" stroke="#ffffff" stroke-width="3" stroke-opacity="0.8" />
+    <line x1="222" y1="18" x2="222" y2="58" stroke="#ffffff" stroke-width="2" stroke-opacity="0.8" />
+    <line x1="234" y1="18" x2="234" y2="58" stroke="#ffffff" stroke-width="7" stroke-opacity="0.8" />
+    <line x1="250" y1="18" x2="250" y2="58" stroke="#ffffff" stroke-width="4" stroke-opacity="0.8" />
+    <line x1="265" y1="18" x2="265" y2="58" stroke="#ffffff" stroke-width="5" stroke-opacity="0.8" />
+    <line x1="280" y1="18" x2="280" y2="58" stroke="#ffffff" stroke-width="2" stroke-opacity="0.8" />
+    <line x1="295" y1="18" x2="295" y2="58" stroke="#ffffff" stroke-width="7" stroke-opacity="0.8" />
+    <line x1="315" y1="18" x2="315" y2="58" stroke="#ffffff" stroke-width="3" stroke-opacity="0.8" />
+    <line x1="330" y1="18" x2="330" y2="58" stroke="#ffffff" stroke-width="6" stroke-opacity="0.8" />
+    <line x1="345" y1="18" x2="345" y2="58" stroke="#ffffff" stroke-width="2" stroke-opacity="0.8" />
+    <line x1="360" y1="18" x2="360" y2="58" stroke="#ffffff" stroke-width="5" stroke-opacity="0.8" />
+    <line x1="375" y1="18" x2="375" y2="58" stroke="#ffffff" stroke-width="7" stroke-opacity="0.8" />
+    <line x1="392" y1="18" x2="392" y2="58" stroke="#ffffff" stroke-width="3" stroke-opacity="0.8" />
+    <line x1="405" y1="18" x2="405" y2="58" stroke="#ffffff" stroke-width="5" stroke-opacity="0.8" />
+    <line x1="420" y1="18" x2="420" y2="58" stroke="#ffffff" stroke-width="2" stroke-opacity="0.8" />
+    <line x1="435" y1="18" x2="435" y2="58" stroke="#ffffff" stroke-width="6" stroke-opacity="0.8" />
+    <line x1="450" y1="18" x2="450" y2="58" stroke="#ffffff" stroke-width="4" stroke-opacity="0.8" />
+    <line x1="465" y1="18" x2="465" y2="58" stroke="#ffffff" stroke-width="3" stroke-opacity="0.8" />
+  </g>
+  <text x="341" y="890" font-family="monospace" font-size="13" fill="#ffffff" fill-opacity="0.45" text-anchor="middle" letter-spacing="6">* 9 3 8 9 9 3 7 6 6 8 *</text>
+  
+  <text x="341" y="960" font-family="monospace" font-size="11" fill="#ffffff" fill-opacity="0.3" text-anchor="middle" letter-spacing="2">AUTHENTIC DEVELOPER CREDENTIAL // SECURE ACCESS</text>
+</svg>
