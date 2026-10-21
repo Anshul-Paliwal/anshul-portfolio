@@ -439,8 +439,11 @@ export default function PortfolioPage({
 
                                 {/* Left Column: Identity & Bio Summary */}
                                 <div className="hero-left relative z-20 w-full lg:max-w-lg xl:max-w-xl 2xl:max-w-2xl flex flex-col justify-center space-y-2.5 sm:space-y-3.5 text-left">
-                                    <div className="font-mono text-[11px] sm:text-xs text-amber-400 tracking-[0.2em] uppercase">
-                                        <span>Full-stack Developer</span>
+                                    <div className="flex items-center gap-2">
+                                        <span className="font-serif italic text-lg sm:text-xl md:text-2xl text-amber-400 font-normal tracking-wide">
+                                            I'm
+                                        </span>
+                                        <span className="h-px w-8 sm:w-10 bg-amber-400/40"></span>
                                     </div>
 
                                     <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[6.5rem] 2xl:text-[7.5rem] font-black text-white tracking-tighter leading-[0.9]">
