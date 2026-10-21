@@ -389,22 +389,32 @@ export default function PortfolioPage({
 
                         {/* Top Navigation */}
                         <header className="hero-nav shrink-0 relative z-30 flex items-center justify-between">
-                            {/* Left: Navigation Bar shifted to left */}
-                            <nav className="flex items-center gap-6 sm:gap-8 lg:gap-12 text-sm lg:text-base text-white/70 font-sans tracking-wide">
-                                <a href="#about" className="hover:text-white transition-colors duration-200">About</a>
-                                <a href="#experience" className="hover:text-white transition-colors duration-200">Experience</a>
-                                <a href="#projects" className="hover:text-white transition-colors duration-200">Projects</a>
-                                <a href="#contact" className="hover:text-white transition-colors duration-200">Contacts</a>
-                            </nav>
+                            {/* Left: Brand Monogram + Navigation Bar */}
+                            <div className="flex items-center gap-6 sm:gap-8 lg:gap-10">
+                                <a href="#" className="group flex items-center gap-1.5 cursor-pointer select-none">
+                                    <span className="font-mono text-xs text-red-500 font-bold tracking-widest">[</span>
+                                    <span className="font-black text-lg sm:text-xl tracking-tighter text-white group-hover:text-red-500 transition-colors duration-300">
+                                        ANSH
+                                    </span>
+                                    <span className="w-1.5 h-1.5 rounded-full bg-red-600 group-hover:scale-125 transition-transform duration-300"></span>
+                                    <span className="font-mono text-xs text-red-500 font-bold tracking-widest">]</span>
+                                </a>
 
-                            {/* Right: Let's Connect Button */}
+                                <nav className="flex items-center gap-5 sm:gap-7 lg:gap-9 text-xs sm:text-sm text-white/70 font-sans tracking-wide">
+                                    <a href="#about" className="hover:text-white transition-colors duration-200">About</a>
+                                    <a href="#experience" className="hover:text-white transition-colors duration-200">Experience</a>
+                                    <a href="#projects" className="hover:text-white transition-colors duration-200">Projects</a>
+                                    <a href="#contact" className="hover:text-white transition-colors duration-200">Contacts</a>
+                                </nav>
+                            </div>
+
+                            {/* Right: Let's Connect Button without green dot */}
                             <div className="flex items-center">
                                 <a
                                     href="#contact"
-                                    className="group relative inline-flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full border border-white/20 bg-white/[0.05] hover:bg-white text-xs sm:text-sm font-medium text-white hover:text-black transition-all duration-300 shadow-sm"
+                                    className="group relative inline-flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full border border-white/20 bg-white/[0.05] hover:bg-red-600 hover:border-red-600 text-xs sm:text-sm font-medium text-white transition-all duration-300 shadow-sm"
                                 >
                                     <span>Let's Connect</span>
-                                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 group-hover:bg-emerald-600 animate-pulse"></span>
                                     <svg className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
                                     </svg>
@@ -439,11 +449,11 @@ export default function PortfolioPage({
 
                                 {/* Left Column: Identity & Bio Summary */}
                                 <div className="hero-left relative z-20 w-full lg:max-w-lg xl:max-w-xl 2xl:max-w-2xl flex flex-col justify-center space-y-2.5 sm:space-y-3.5 text-left">
-                                    <div className="flex items-center gap-2">
-                                        <span className="font-serif italic text-lg sm:text-xl md:text-2xl text-amber-400 font-normal tracking-wide">
+                                    <div className="flex items-center gap-2.5">
+                                        <span className="font-serif italic text-lg sm:text-xl md:text-2xl text-red-500 font-normal tracking-wide">
                                             I'm
                                         </span>
-                                        <span className="h-px w-8 sm:w-10 bg-amber-400/40"></span>
+                                        <span className="h-px w-8 sm:w-10 bg-red-600/50"></span>
                                     </div>
 
                                     <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[6.5rem] 2xl:text-[7.5rem] font-black text-white tracking-tighter leading-[0.9]">
@@ -451,7 +461,7 @@ export default function PortfolioPage({
                                         <span className="text-transparent stroke-text">Paliwal</span>
                                     </h1>
 
-                                    <div className="w-24 h-1 sm:h-1.5 bg-amber-400 rounded-full"></div>
+                                    <div className="w-24 h-1 sm:h-1.5 bg-red-600 rounded-full"></div>
 
                                     <p className="text-white/80 text-xs sm:text-sm md:text-base leading-relaxed max-w-sm font-sans drop-shadow-md">
                                         Backend-focused Computer Science student with hands-on experience building tested{" "}
@@ -463,7 +473,7 @@ export default function PortfolioPage({
                                 {/* Right Column: Core Services & Action Button */}
                                 <div className="hero-right relative z-20 w-full lg:max-w-sm xl:max-w-md flex flex-col justify-center space-y-4 text-left lg:text-right lg:items-end">
                                     <div className="space-y-1.5">
-                                        <span className="font-mono text-[11px] sm:text-xs text-amber-400 tracking-[0.2em] uppercase block">
+                                        <span className="font-mono text-[11px] sm:text-xs text-red-500 tracking-[0.2em] uppercase block">
                                             Services & Focus
                                         </span>
                                         <h3 className="text-base sm:text-lg md:text-xl font-bold text-white leading-snug drop-shadow-md">
@@ -481,10 +491,10 @@ export default function PortfolioPage({
                                             href="#projects"
                                             className="hero-badge group inline-flex items-center gap-2.5 cursor-pointer"
                                         >
-                                            <div className="bg-white text-black px-6 sm:px-7 py-2.5 sm:py-3 rounded-full font-serif italic text-base sm:text-lg font-normal shadow-lg group-hover:bg-amber-400 transition-all duration-300">
+                                            <div className="bg-white text-black px-6 sm:px-7 py-2.5 sm:py-3 rounded-full font-serif italic text-base sm:text-lg font-normal shadow-lg group-hover:bg-red-600 group-hover:text-white transition-all duration-300">
                                                 Projects
                                             </div>
-                                            <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-white text-black flex items-center justify-center shadow-lg group-hover:bg-amber-400 group-hover:scale-105 group-hover:translate-x-1 transition-all duration-300">
+                                            <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-white text-black flex items-center justify-center shadow-lg group-hover:bg-red-600 group-hover:text-white group-hover:scale-105 group-hover:translate-x-1 transition-all duration-300">
                                                 <svg className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
                                                     <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
                                                 </svg>
@@ -500,7 +510,7 @@ export default function PortfolioPage({
                         <footer className="hero-bottom-bar shrink-0 relative z-30 w-full pt-2 sm:pt-3">
                             <div className="w-full bg-white/[0.02] border border-white/10 rounded-2xl p-2 sm:p-2.5 flex flex-col md:flex-row items-center justify-between gap-2.5">
                                 
-                                {/* Core Tech Pillars */}
+                                {/* Core Tech Pillars - Yellow dots removed */}
                                 <div className="flex flex-wrap items-center justify-center md:justify-start gap-1.5 sm:gap-2">
                                     {[
                                         { name: "Java • Spring Boot" },
@@ -510,9 +520,8 @@ export default function PortfolioPage({
                                     ].map((tech) => (
                                         <div
                                             key={tech.name}
-                                            className="bg-white/[0.04] border border-white/10 hover:border-amber-400/40 rounded-xl px-3 py-1.5 flex items-center gap-2 transition-all"
+                                            className="bg-white/[0.04] border border-white/10 hover:border-red-500/40 rounded-xl px-3.5 py-1.5 flex items-center transition-all"
                                         >
-                                            <span className="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
                                             <span className="font-mono font-medium text-[11px] sm:text-xs text-white/90">{tech.name}</span>
                                         </div>
                                     ))}
@@ -526,7 +535,7 @@ export default function PortfolioPage({
                                             href={contact.href}
                                             target={contact.href.startsWith("http") ? "_blank" : undefined}
                                             rel={contact.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                                            className="rounded-xl border border-white/10 bg-white/[0.03] px-3 py-1.5 flex items-center gap-2 text-xs text-white/70 hover:text-white hover:border-amber-400/50 hover:bg-amber-400/10 transition-all duration-300 cursor-pointer shadow-sm"
+                                            className="rounded-xl border border-white/10 bg-white/[0.03] px-3 py-1.5 flex items-center gap-2 text-xs text-white/70 hover:text-white hover:border-red-500/50 hover:bg-red-500/10 transition-all duration-300 cursor-pointer shadow-sm"
                                         >
                                             <span className="text-white/90">{contact.icon}</span>
                                             <span className="font-sans font-medium text-[11px] sm:text-xs">{contact.name}</span>
