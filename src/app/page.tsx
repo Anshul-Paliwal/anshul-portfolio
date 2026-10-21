@@ -436,9 +436,9 @@ export default function PortfolioPage({
                             </div>
 
                             {/* Center Cutout Portrait: Background completely removed, standing in front of text */}
-                            <div className="hero-portrait absolute inset-x-0 bottom-0 top-0 z-10 pointer-events-none flex justify-center items-end">
+                            <div className="hero-portrait absolute inset-x-0 bottom-0 top-0 z-10 pointer-events-none flex justify-center items-end pt-1 sm:pt-2">
                                 <img
-                                    src="/anshul-cutout.png"
+                                    src="/anshul-white-shirt-fade.png"
                                     alt="Anshul Paliwal"
                                     className="w-auto h-full max-h-full object-contain object-bottom drop-shadow-[0_25px_50px_rgba(0,0,0,0.85)] select-none"
                                 />
