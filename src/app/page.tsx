@@ -438,18 +438,18 @@ export default function PortfolioPage({
                             <div className="relative z-20 flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-10 w-full px-2 sm:px-4">
 
                                 {/* Left Column: Identity & Bio Summary */}
-                                <div className="hero-left relative z-20 w-full lg:max-w-sm xl:max-w-md flex flex-col justify-center space-y-3 sm:space-y-4 text-left">
+                                <div className="hero-left relative z-20 w-full lg:max-w-md xl:max-w-lg flex flex-col justify-center space-y-2.5 sm:space-y-3.5 text-left">
                                     <div className="flex items-center gap-2 font-mono text-[11px] sm:text-xs text-amber-400 tracking-[0.2em] uppercase">
                                         <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
                                         <span>Full-stack Developer</span>
                                     </div>
 
-                                    <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.02]">
+                                    <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[5.25rem] 2xl:text-[6.25rem] font-black text-white tracking-tighter leading-[0.94]">
                                         Anshul <br />
                                         <span className="text-transparent stroke-text">Paliwal</span>
                                     </h1>
 
-                                    <div className="w-16 h-1 bg-amber-400 rounded-full"></div>
+                                    <div className="w-20 h-1 sm:h-1.5 bg-amber-400 rounded-full"></div>
 
                                     <p className="text-white/80 text-xs sm:text-sm md:text-base leading-relaxed max-w-sm font-sans drop-shadow-md">
                                         Backend-focused Computer Science student with hands-on experience building tested{" "}
