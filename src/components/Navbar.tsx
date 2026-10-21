@@ -23,21 +23,23 @@ export default function Navbar({ currentPath = '/' }: NavbarProps) {
     );
 
     return (
-        <header className="hero-nav shrink-0 relative z-30 flex flex-col sm:flex-row items-center justify-between w-full gap-3 sm:gap-4">
-            {/* Top row / Left section */}
-            <div className="flex items-center justify-between w-full sm:w-auto gap-4 sm:gap-6 lg:gap-8">
-                {/* Brand Monogram */}
-                <Link href="/" className="group flex items-center gap-1.5 cursor-pointer select-none">
-                    <span className="font-mono text-xs text-red-500 font-bold tracking-widest">[</span>
-                    <span className="font-black text-lg sm:text-xl tracking-tighter text-white group-hover:text-red-500 transition-colors duration-300">
-                        ANSH
-                    </span>
-                    <span className="w-1.5 h-1.5 rounded-full bg-red-600 group-hover:scale-125 transition-transform duration-300"></span>
-                    <span className="font-mono text-xs text-red-500 font-bold tracking-widest">]</span>
-                </Link>
+        <header className="hero-nav shrink-0 relative z-30 w-full">
+            {/* Main Header Row: Left (Logo), Center (GooeyNav), Right (Connect Button) */}
+            <div className="flex items-center justify-between w-full">
+                {/* Left: Brand Monogram */}
+                <div className="flex items-center justify-start sm:flex-1">
+                    <Link href="/" className="group flex items-center gap-1.5 cursor-pointer select-none">
+                        <span className="font-mono text-xs text-red-500 font-bold tracking-widest">[</span>
+                        <span className="font-black text-lg sm:text-xl tracking-tighter text-white group-hover:text-red-500 transition-colors duration-300">
+                            ANSH
+                        </span>
+                        <span className="w-1.5 h-1.5 rounded-full bg-red-600 group-hover:scale-125 transition-transform duration-300"></span>
+                        <span className="font-mono text-xs text-red-500 font-bold tracking-widest">]</span>
+                    </Link>
+                </div>
 
-                {/* Desktop / Tablet GooeyNav */}
-                <div className="hidden sm:block">
+                {/* Center: Desktop & Tablet GooeyNav centered in the middle */}
+                <div className="hidden sm:flex items-center justify-center">
                     <GooeyNav
                         items={navItems}
                         activeIndex={activeIndex}
@@ -57,22 +59,23 @@ export default function Navbar({ currentPath = '/' }: NavbarProps) {
                     />
                 </div>
 
-                {/* Mobile Connect Button on top row right */}
-                <div className="sm:hidden flex items-center">
+                {/* Right: Let's Connect Action */}
+                <div className="flex items-center justify-end sm:flex-1">
                     <Link
                         href="/contacts"
-                        className="group relative inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full border border-white/20 bg-white/[0.05] hover:bg-red-600 hover:border-red-600 text-xs font-medium text-white transition-all duration-300"
+                        className="group relative inline-flex items-center gap-2 px-3.5 sm:px-5 py-1.5 sm:py-2.5 rounded-full border border-white/20 bg-white/[0.05] hover:bg-red-600 hover:border-red-600 text-xs sm:text-sm font-medium text-white transition-all duration-300 shadow-sm whitespace-nowrap"
                     >
-                        <span>Connect</span>
-                        <svg className="w-3 h-3 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
+                        <span className="sm:inline hidden">Let's Connect</span>
+                        <span className="sm:hidden inline">Connect</span>
+                        <svg className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
                         </svg>
                     </Link>
                 </div>
             </div>
 
-            {/* Mobile GooeyNav centered row */}
-            <div className="sm:hidden w-full flex justify-center overflow-x-auto no-scrollbar py-0.5">
+            {/* Mobile: Centered GooeyNav Row */}
+            <div className="sm:hidden w-full flex justify-center overflow-x-auto no-scrollbar pt-2.5">
                 <GooeyNav
                     items={navItems}
                     activeIndex={activeIndex}
@@ -90,19 +93,6 @@ export default function Navbar({ currentPath = '/' }: NavbarProps) {
                     wobble={0.5}
                     hoverEffect={true}
                 />
-            </div>
-
-            {/* Desktop Let's Connect Button */}
-            <div className="hidden sm:flex items-center">
-                <Link
-                    href="/contacts"
-                    className="group relative inline-flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full border border-white/20 bg-white/[0.05] hover:bg-red-600 hover:border-red-600 text-xs sm:text-sm font-medium text-white transition-all duration-300 shadow-sm whitespace-nowrap"
-                >
-                    <span>Let's Connect</span>
-                    <svg className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
-                    </svg>
-                </Link>
             </div>
         </header>
     );
