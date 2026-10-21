@@ -561,39 +561,156 @@ export default function PortfolioPage({
                     </div>
                 </section>
 
-                {/* EXPERIENCE SECTION */}
-                <section id="experience" className="min-h-[60vh] flex flex-col justify-center relative z-10 px-6 sm:px-8 py-20 max-w-7xl mx-auto w-full">
-                    <div className="mb-12">
-                        <span className="font-mono text-red-500 text-xs sm:text-sm tracking-[0.5em] uppercase block">CAREER TIMELINE</span>
-                        <h2 className="text-3xl sm:text-5xl md:text-6xl font-black uppercase tracking-tighter text-white mt-2">Experience</h2>
+                {/* EXPERIENCE SECTION MATCHING REFERENCE DESIGN */}
+                <section id="experience" className="relative z-10 px-4 sm:px-6 md:px-8 py-24 max-w-7xl mx-auto w-full">
+                    
+                    {/* Big Hollow Headline Matching Reference */}
+                    <div className="w-full text-center mb-8 sm:mb-12 overflow-hidden select-none">
+                        <h2 className="text-[13vw] sm:text-[11vw] md:text-[8rem] lg:text-[9.5rem] font-black uppercase tracking-tight text-transparent stroke-text opacity-40 leading-none">
+                            EXPERIENCE
+                        </h2>
                     </div>
 
-                    <div className="space-y-6">
-                        <div className="group border border-white/10 bg-white/[0.02] p-6 sm:p-8 rounded-2xl hover:border-white/25 transition-all duration-300">
-                            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
+                    {/* Timeline Stepper Track */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 mb-6 items-center px-1">
+                        {/* Left Node: Only Click */}
+                        <div className="flex items-center gap-3">
+                            <div className="w-4 h-4 rounded-full border-2 border-white/40 bg-transparent shrink-0"></div>
+                            <span className="text-xs sm:text-sm text-white/60 font-sans tracking-wide">
+                                Sep, 2025 — Oct, 2025
+                            </span>
+                            <div className="hidden md:block h-px bg-white/15 flex-1 ml-2"></div>
+                        </div>
+
+                        {/* Right Node: ParkEzy */}
+                        <div className="flex items-center gap-3">
+                            <div className="w-4 h-4 rounded-full bg-white flex items-center justify-center shrink-0">
+                                <div className="w-1.5 h-1.5 rounded-full bg-black"></div>
+                            </div>
+                            <span className="text-xs sm:text-sm text-white/90 font-sans tracking-wide">
+                                Dec, 2025 — Present
+                            </span>
+                            <span className="text-[10px] sm:text-xs text-emerald-400 border border-emerald-500/40 bg-emerald-500/10 px-2.5 py-0.5 rounded-full font-sans font-medium">
+                                Present
+                            </span>
+                        </div>
+                    </div>
+
+                    {/* 2-Column Experience Cards */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 items-stretch">
+                        
+                        {/* Card 1: Full Stack Developer Intern (Only Click) */}
+                        <div className="group bg-[#0c0c0c] border border-white/10 rounded-2xl p-6 sm:p-8 flex flex-col justify-between hover:border-white/25 transition-all duration-300 shadow-2xl relative overflow-hidden">
+                            <div className="space-y-4">
+                                <span className="font-mono text-xs text-white/40 block">01</span>
                                 <div>
-                                    <h3 className="text-xl sm:text-2xl font-bold text-white group-hover:text-red-500 transition-colors">
-                                        Full-Stack / Backend Developer Intern
+                                    <h3 className="text-xl sm:text-2xl font-bold text-white tracking-tight group-hover:text-red-500 transition-colors">
+                                        Full Stack Developer Intern
                                     </h3>
-                                    <p className="font-mono text-xs sm:text-sm text-white/50 mt-1">
-                                        REST APIs • Java • Spring Boot • Node.js
+                                    <p className="text-base sm:text-lg text-white/70 font-normal mt-1">
+                                        Only Click
                                     </p>
                                 </div>
-                                <div className="font-mono text-xs sm:text-sm text-white/40 border border-white/10 px-3 py-1 rounded-full self-start sm:self-center">
-                                    INTERNSHIP EXPERIENCE
+
+                                <p className="text-white/60 text-sm leading-relaxed pt-2">
+                                    Worked on backend and mobile app for Only Click.
+                                </p>
+
+                                <ul className="space-y-2 text-sm text-white/70 leading-relaxed pt-1">
+                                    <li className="flex items-start gap-2">
+                                        <span className="text-white/40 select-none mt-0.5">•</span>
+                                        <span>Built and maintained backend services and REST APIs.</span>
+                                    </li>
+                                    <li className="flex items-start gap-2">
+                                        <span className="text-white/40 select-none mt-0.5">•</span>
+                                        <span>Contributed to mobile application features and API integrations.</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            {/* Tech Stack Pills */}
+                            <div className="pt-8 mt-6 border-t border-white/5">
+                                <div className="flex items-center gap-2 mb-3">
+                                    <span className="font-mono text-[10px] text-white/40 tracking-wider uppercase">TECH:</span>
+                                </div>
+                                <div className="flex flex-wrap gap-2">
+                                    {["React Native", "Node.js", "Express", "REST APIs", "Git & GitHub"].map((tech) => (
+                                        <span
+                                            key={tech}
+                                            className="font-mono text-xs text-white/80 bg-white/[0.03] border border-white/10 px-3 py-1.5 rounded-lg hover:border-red-500/40 hover:text-white transition-colors"
+                                        >
+                                            {tech}
+                                        </span>
+                                    ))}
                                 </div>
                             </div>
-                            <p className="font-sans text-sm sm:text-base text-white/70 leading-relaxed max-w-4xl">
-                                Built and tested scalable REST APIs and full-stack features utilizing Java, Spring Boot, and Node.js. Integrated relational and NoSQL databases (PostgreSQL and MongoDB) and developed interactive frontend components with React.
-                            </p>
-                            <div className="flex flex-wrap gap-2 mt-6">
-                                {["Java", "Spring Boot", "REST APIs", "Node.js", "PostgreSQL", "MongoDB", "React", "Next.js"].map((tech) => (
-                                    <span key={tech} className="font-mono text-[11px] text-white/60 bg-white/5 border border-white/10 px-2.5 py-1 rounded-md">
-                                        {tech}
-                                    </span>
-                                ))}
+                        </div>
+
+                        {/* Card 2: Technical Co-Founder (ParkEzy) */}
+                        <div className="group bg-[#0c0c0c] border border-white/10 rounded-2xl p-6 sm:p-8 flex flex-col justify-between hover:border-white/25 transition-all duration-300 shadow-2xl relative overflow-hidden">
+                            <div className="space-y-4">
+                                <span className="font-mono text-xs text-white/40 block">02</span>
+                                <div>
+                                    <h3 className="text-xl sm:text-2xl font-bold text-white tracking-tight group-hover:text-red-500 transition-colors">
+                                        Technical Co-Founder
+                                    </h3>
+                                    <a
+                                        href="https://parkezy.com"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="inline-flex items-center gap-1.5 text-base sm:text-lg text-white/70 font-normal mt-1 hover:text-white transition-colors group/link"
+                                    >
+                                        <span>ParkEzy</span>
+                                        <svg className="w-3.5 h-3.5 text-white/40 group-hover/link:text-white transition-colors" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                        </svg>
+                                    </a>
+                                </div>
+
+                                <p className="text-white/60 text-sm leading-relaxed pt-2">
+                                    Technical co-founder leading platform architecture, backend systems, and mobile application engineering for a smart parking and slot reservation solution.
+                                </p>
+
+                                <ul className="space-y-2 text-sm text-white/70 leading-relaxed pt-1">
+                                    <li className="flex items-start gap-2">
+                                        <span className="text-white/40 select-none mt-0.5">•</span>
+                                        <span>Architecting scalable backend infrastructure and RESTful APIs for real-time parking spot discovery.</span>
+                                    </li>
+                                    <li className="flex items-start gap-2">
+                                        <span className="text-white/40 select-none mt-0.5">•</span>
+                                        <span>Developing cross-platform mobile application with live location mapping, parking search, and booking flows.</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            {/* Tech Stack Pills */}
+                            <div className="pt-8 mt-6 border-t border-white/5">
+                                <div className="flex items-center gap-2 mb-3">
+                                    <span className="font-mono text-[10px] text-white/40 tracking-wider uppercase">TECH:</span>
+                                </div>
+                                <div className="flex flex-wrap gap-2">
+                                    {[
+                                        "React Native",
+                                        "Node.js",
+                                        "Express",
+                                        "PostgreSQL",
+                                        "Redis",
+                                        "Grafana + Loki",
+                                        "Razorpay",
+                                        "MSG91",
+                                        "Google Maps API"
+                                    ].map((tech) => (
+                                        <span
+                                            key={tech}
+                                            className="font-mono text-xs text-white/80 bg-white/[0.03] border border-white/10 px-3 py-1.5 rounded-lg hover:border-red-500/40 hover:text-white transition-colors"
+                                        >
+                                            {tech}
+                                        </span>
+                                    ))}
+                                </div>
                             </div>
                         </div>
+
                     </div>
                 </section>
 
