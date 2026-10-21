@@ -2,6 +2,7 @@
 
 /* eslint-disable @next/next/no-img-element */
 import React, { useEffect, useRef, useState, useCallback } from 'react';
+import Link from 'next/link';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -391,34 +392,34 @@ export default function PortfolioPage({
                         <header className="hero-nav shrink-0 relative z-30 flex items-center justify-between">
                             {/* Left: Brand Monogram + Navigation Bar */}
                             <div className="flex items-center gap-6 sm:gap-8 lg:gap-10">
-                                <a href="#" className="group flex items-center gap-1.5 cursor-pointer select-none">
+                                <Link href="/" className="group flex items-center gap-1.5 cursor-pointer select-none">
                                     <span className="font-mono text-xs text-red-500 font-bold tracking-widest">[</span>
                                     <span className="font-black text-lg sm:text-xl tracking-tighter text-white group-hover:text-red-500 transition-colors duration-300">
                                         ANSH
                                     </span>
                                     <span className="w-1.5 h-1.5 rounded-full bg-red-600 group-hover:scale-125 transition-transform duration-300"></span>
                                     <span className="font-mono text-xs text-red-500 font-bold tracking-widest">]</span>
-                                </a>
+                                </Link>
 
                                 <nav className="flex items-center gap-5 sm:gap-7 lg:gap-9 text-xs sm:text-sm text-white/70 font-sans tracking-wide">
-                                    <a href="#about" className="hover:text-white transition-colors duration-200">About</a>
-                                    <a href="#experience" className="hover:text-white transition-colors duration-200">Experience</a>
-                                    <a href="#projects" className="hover:text-white transition-colors duration-200">Projects</a>
-                                    <a href="#contact" className="hover:text-white transition-colors duration-200">Contacts</a>
+                                    <Link href="/about" className="hover:text-white transition-colors duration-200">About</Link>
+                                    <Link href="/experience" className="hover:text-white transition-colors duration-200">Experience</Link>
+                                    <Link href="/projects" className="hover:text-white transition-colors duration-200">Projects</Link>
+                                    <Link href="/contacts" className="hover:text-white transition-colors duration-200">Contacts</Link>
                                 </nav>
                             </div>
 
                             {/* Right: Let's Connect Button without green dot */}
                             <div className="flex items-center">
-                                <a
-                                    href="#contact"
+                                <Link
+                                    href="/contacts"
                                     className="group relative inline-flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full border border-white/20 bg-white/[0.05] hover:bg-red-600 hover:border-red-600 text-xs sm:text-sm font-medium text-white transition-all duration-300 shadow-sm"
                                 >
                                     <span>Let's Connect</span>
                                     <svg className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
                                     </svg>
-                                </a>
+                                </Link>
                             </div>
                         </header>
 
@@ -487,8 +488,8 @@ export default function PortfolioPage({
 
                                     {/* Projects Action Button */}
                                     <div className="pt-1">
-                                        <a
-                                            href="#projects"
+                                        <Link
+                                            href="/projects"
                                             className="hero-badge group inline-flex items-center gap-2.5 cursor-pointer"
                                         >
                                             <div className="bg-white text-black px-6 sm:px-7 py-2.5 sm:py-3 rounded-full font-serif italic text-base sm:text-lg font-normal shadow-lg group-hover:bg-red-600 group-hover:text-white transition-all duration-300">
@@ -499,7 +500,7 @@ export default function PortfolioPage({
                                                     <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
                                                 </svg>
                                             </div>
-                                        </a>
+                                        </Link>
                                     </div>
                                 </div>
 
