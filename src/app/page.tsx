@@ -3,6 +3,7 @@
 /* eslint-disable @next/next/no-img-element */
 import React, { useEffect, useRef, useState, useCallback } from 'react';
 import Link from 'next/link';
+import Navbar from '@/components/Navbar';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -388,40 +389,8 @@ export default function PortfolioPage({
                         <div className="absolute -top-16 -right-16 sm:-top-20 sm:-right-20 md:-top-24 md:-right-24 w-60 h-60 sm:w-80 sm:h-80 md:w-96 md:h-96 rounded-full border border-white/15 pointer-events-none"></div>
                         <div className="absolute top-[60%] -right-20 sm:-right-28 md:-right-36 w-52 h-52 sm:w-68 sm:h-68 md:w-80 md:h-80 rounded-full border border-white/10 pointer-events-none"></div>
 
-                        {/* Top Navigation */}
-                        <header className="hero-nav shrink-0 relative z-30 flex items-center justify-between">
-                            {/* Left: Brand Monogram + Navigation Bar */}
-                            <div className="flex items-center gap-6 sm:gap-8 lg:gap-10">
-                                <Link href="/" className="group flex items-center gap-1.5 cursor-pointer select-none">
-                                    <span className="font-mono text-xs text-red-500 font-bold tracking-widest">[</span>
-                                    <span className="font-black text-lg sm:text-xl tracking-tighter text-white group-hover:text-red-500 transition-colors duration-300">
-                                        ANSH
-                                    </span>
-                                    <span className="w-1.5 h-1.5 rounded-full bg-red-600 group-hover:scale-125 transition-transform duration-300"></span>
-                                    <span className="font-mono text-xs text-red-500 font-bold tracking-widest">]</span>
-                                </Link>
-
-                                <nav className="flex items-center gap-5 sm:gap-7 lg:gap-9 text-xs sm:text-sm text-white/70 font-sans tracking-wide">
-                                    <Link href="/about" className="hover:text-white transition-colors duration-200">About</Link>
-                                    <Link href="/experience" className="hover:text-white transition-colors duration-200">Experience</Link>
-                                    <Link href="/projects" className="hover:text-white transition-colors duration-200">Projects</Link>
-                                    <Link href="/contacts" className="hover:text-white transition-colors duration-200">Contacts</Link>
-                                </nav>
-                            </div>
-
-                            {/* Right: Let's Connect Button without green dot */}
-                            <div className="flex items-center">
-                                <Link
-                                    href="/contacts"
-                                    className="group relative inline-flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full border border-white/20 bg-white/[0.05] hover:bg-red-600 hover:border-red-600 text-xs sm:text-sm font-medium text-white transition-all duration-300 shadow-sm"
-                                >
-                                    <span>Let's Connect</span>
-                                    <svg className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
-                                        <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
-                                    </svg>
-                                </Link>
-                            </div>
-                        </header>
+                        {/* Top Navigation with GooeyNav */}
+                        <Navbar currentPath="/" />
 
                         {/* Middle Content: Big Typographic Backdrop + Flanking Columns + Central Transparent Cutout */}
                         <div className="relative z-10 my-auto flex-1 min-h-0 flex flex-col justify-center py-2 sm:py-3 w-full">
